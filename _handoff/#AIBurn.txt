@@ -1,0 +1,259 @@
+#AIBurn
+#handoff 
+# AIBurn: Handoff
+AIBurn Calculator - Project Handoff (Updated)
+
+Project Overview
+
+AIBurn is a React-based AI Token Cost Calculator that helps developers and teams compare AI model pricing and estimate potential savings by switching between OpenAI, Anthropic, Groq, and DeepSeek models.
+
+Location: /Users/bkerwood/projects/aiburn-cost-calculator/aiburn-website
+
+Tech Stack (Current)
+
+React: 19.2.0
+Vite: 7.2.2
+Tailwind CSS: Via CDN in index.html
+lucide-react: 0.394.0 (note: uses --legacy-peer-deps for React 19 compatibility)
+Node: Pure JavaScript (.jsx), no TypeScript
+
+Project Structure
+
+aiburn-website/
+├── src/
+│   ├── App.jsx (main component ~700 lines)
+│   ├── main.jsx
+│   └── index.css
+├── api/
+│   └── usage.js (Vercel serverless function)
+├── index.html
+├── package.json
+├── vite.config.js
+├── vercel.json
+├── .gitignore
+└── dist/ (built output)
+
+Layout (NEW - 3 Column)
+
+Grid Structure: grid-cols-1 lg:grid-cols-4
+
+Left Column (lg:col-span-1, 25%) - Left Advertising
+Center Column (lg:col-span-2, 50%) - Calculator & Results
+Right Column (lg:col-span-1, 25%) - Right Advertising
+
+Mobile collapses to single column.
+
+Left Sidebar (25%)
+
+Sidebar Premium ad
+Partner With Us CTA (sticky at top-24)
+
+Center Content (50%)
+
+All calculator steps (Step 1, Step 2, Step 3)
+Results display in consolidated card
+No ads in main content area
+
+Right Sidebar (25%)
+
+Featured Rotating ad (auto-rotates every 10s in Quick mode)
+In-Content Top ad
+About AIBurn info box (sticky at top-24)
+
+Core Features Implemented
+
+Two Calculator Modes
+
+Quick Calculator
+Model selection (9 AI models with pricing)
+Token usage slider (1M-200M tokens)
+Calculates costs with 60% input/40% output token ratio
+Returns top 8 alternatives sorted by savings
+Exact Usage
+OpenAI integration (fetches actual 30-day usage)
+Anthropic disabled with prominent info banner explaining no public API yet
+User enters API key securely (password field, not stored)
+Disabled Anthropic button with "Coming Soon" label
+
+AI Models (9 Total)
+
+GPT-4, GPT-4 Turbo, GPT-4o, GPT-3.5 Turbo (OpenAI)
+Claude 3 Opus, Claude 3.5 Sonnet, Claude 3 Haiku (Anthropic)
+Llama 3.1 70B (Groq)
+DeepSeek Chat
+
+Results Display ("Step 3: Review Your Analysis")
+
+Single consolidated white card with overflow:hidden
+Purple gradient header showing:
+"YOUR CURRENT MONTHLY SPENDING" label
+Large cost amount ($)
+Model name and token usage (Quick mode only)
+Token breakdown (Input/Output) inline, horizontally, centered (Quick mode only)
+Token Breakdown (inline with header):
+Centered above the input/output values
+Semi-transparent box with Input/Output displayed horizontally
+Shows breakdown as decimal M (e.g., 6.0M)
+TOP 8 ALTERNATIVES section with:
+Compact rows (not separate cards)
+Model name & category
+Cost ($)
+Savings ($)
+Savings percentage (green badge)
+Hover effect for interactivity
+Action buttons at bottom:
+Share on X (dark button)
+Download Report (blue button)
+
+Share & Download Features
+
+Share on X: Pre-filled tweet with current cost, savings, model name, and link
+Download Report: Canvas-generated 1200x630 PNG with gradient background, costs, savings, and branding
+
+Header
+
+Fire emoji icon (🔥) in purple-blue gradient square
+"AIBurn" text clearly visible
+"Optimize your AI costs" tagline
+Mode toggle buttons (Quick Calc, Exact Usage) on right
+
+Advertising System
+
+8 configurable ad slots (mostly empty placeholders):
+
+Header Banner ($1,499/mo) - REMOVED from display
+Sidebar Premium ($999/mo) - Left sidebar
+Featured Rotating #1-3 ($499/mo each) - Right sidebar, auto-rotates every 10s
+In-Content Top ($399/mo) - Right sidebar
+In-Content Bottom ($299/mo) - REMOVED
+Footer Banner ($199/mo) - Footer only
+
+Ad Card Styling (Available Slots):
+
+Gradient background
+Subtle shadow (shadow-md)
+Small padding (p-6)
+Compact text
+"Inquire →" button
+Minimal visual distraction to keep focus on tool
+
+Vercel Serverless Function
+
+/api/usage.js handles:
+
+POST requests with {apiKey, provider}
+Proxies to OpenAI usage API
+Returns 30-day usage breakdown by model
+CORS headers enabled
+Error handling for invalid keys
+
+Latest Changes (This Session)
+
+3-column layout restructure:
+Left sidebar: Sidebar Premium ad + Partner CTA (sticky)
+Center: Calculator + Results (50% width)
+Right sidebar: Featured ad + In-Content Top ad + About AIBurn (sticky)
+Token breakdown moved inline with spending total
+Token breakdown now horizontal and centered
+Removed In-Content Bottom ad from results
+Both sidebars use sticky top-24 for persistent positioning
+Simplified ad appearance (removed bold styling)
+
+Current State
+
+✅ Both calculator modes fully functional
+✅ All 9 models configured with accurate pricing
+✅ Quick mode calculations working
+✅ OpenAI exact usage integration ready
+✅ Results display in single consolidated card
+✅ Token breakdown inline and horizontal
+✅ Share and download features implemented
+✅ 3-column layout implemented
+✅ Sticky sidebars for ad visibility
+✅ Ad system configured
+✅ App builds and runs successfully
+✅ Focus on tool with ads as secondary (25% real estate each side)
+
+Commands
+
+# Install dependencies (with legacy peer deps for lucide-react + React 19)
+npm install --legacy-peer-deps
+
+# Development server (http://localhost:5173)
+npm run dev
+
+# Production build
+npm run build
+
+# Preview production build
+npm run preview
+
+Styling
+
+Primary: Purple (#9333EA) to Blue (#3B82F6) gradient
+Savings: Green (#10B981)
+Rounded: rounded-3xl (cards), rounded-xl (buttons)
+Responsive: Collapses to single column on mobile
+Max width: 7xl (1280px) centered container
+Sticky elements: sticky top-24 for sidebars
+Grid: grid-cols-1 lg:grid-cols-4 with gap-8
+
+API Integration Notes
+
+OpenAI endpoint: https://api.openai.com/v1/usage
+Anthropic: No public usage API yet (placeholder in code)
+Function proxies API key but doesn't store it
+30-day usage window for exact mode
+
+What Needs Work / TODO
+
+Anthropic API support - Wait for public release, then implement in /api/usage.js
+Featured ad rotation - Currently set to 10s interval, can adjust if needed
+Twitter handle - Change @howstudio to actual handle in shareOnTwitter() function
+Email address - Change ads@howstud.io to actual email throughout
+Domain links - Update howstud.io references to final domain
+Ad sponsors - Add actual sponsor data when deals are made (sponsor objects in AD_SLOTS)
+Canvas download - Test on different browsers for PNG generation quality
+Mobile optimization - Test responsive layout on actual mobile devices
+Performance - Monitor bundle size, optimize if needed
+Analytics - Consider adding tracking for calculator usage and ad impressions
+
+Deployment
+
+Target: Vercel at aiburn.howstud.io
+Config: vercel.json specifies build command, output dir, and framework
+Environment: No .env needed currently (API key is user-provided)
+Build output: Goes to dist/ folder
+Sticky sidebars: May need adjustment on small screens - test thoroughly
+
+Key Files to Know
+
+src/App.jsx - All logic, state, and UI (main component, ~750 lines)
+api/usage.js - OpenAI/Anthropic proxy function
+vite.config.js - Build configuration
+index.html - Entry point, includes Tailwind CDN
+src/index.css - Custom CSS (animations, scrollbar hiding)
+
+Important State Variables
+
+const [mode, setMode] = useState('quick') // 'quick' or 'exact'
+const [selectedModel, setSelectedModel] = useState('GPT-4o')
+const [monthlyTokens, setMonthlyTokens] = useState(10) // in millions
+const [provider, setProvider] = useState('openai')
+const [apiKey, setApiKey] = useState('')
+const [loading, setLoading] = useState(false)
+const [results, setResults] = useState(null)
+const [error, setError] = useState('')
+const [currentFeatureAd, setCurrentFeatureAd] = useState(0) // rotates featured ads
+
+Key Functions
+
+calculateCosts() - Computes Quick mode results
+analyzeExactUsage() - Fetches OpenAI API data
+shareOnTwitter() - Opens pre-filled tweet
+downloadReport() - Generates PNG via Canvas
+AdCard() - Renders ad slots (available or sponsored)
+
+---
+
+Next Person Notes: App is fully functional with professional 3-column layout. Main advertising real estate is properly balanced on both sides while keeping tool-focused content centered. Both sidebars are sticky for ad visibility. Ready for feature additions or deployment. Focus areas: Anthropic integration when API released, sponsor deals to fill ad slots, and mobile testing on actual devices for responsive behavior.

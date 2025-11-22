@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Token Cost Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script>
+        // Simple implementation without React for quick preview
+        const models = {
+          'gpt-4': { 
+            name: 'GPT-4',
+            provider: 'OpenAI',
+            input: 30, 
+            output: 60,
+            quality: 'Highest',
+            speed: 'Slow',
+          },
+          'gpt-4-turbo': { 
+            name: 'GPT-4 Turbo',
+            provider: 'OpenAI',
+            input: 10, 
+            output: 30,
+            quality: 'High',
+            speed: 'Fast',
+          },
+          'gpt-4o': { 
+            name: 'GPT-4o',
+            provider: 'OpenAI',
+            input: 2.5, 
+            output: 10,
+            quality: 'High',
+            speed: 'Very Fast',
+          },
+          'gpt-3.5-turbo': { 
+            name: 'GPT-3.5 Turbo',
+            provider: 'OpenAI',
+            input: 0.5, 
+            output: 1.5,
+            quality: 'Good',
+            speed: 'Very Fast',
+          },
+          'claude-opus': { 
+            name: 'Claude 3 Opus',
+            provider: 'Anthropic',
+            input: 15, 
+            output: 75,
+            quality: 'Highest',
+            speed: 'Medium',
+          },
+          'claude-sonnet': { 
+            name: 'Claude 3.5 Sonnet',
+            provider: 'Anthropic',
+            input: 3, 
+            output: 15,
+            quality: 'High',
+            speed: 'Fast',
+          },
+          'claude-haiku': { 
+            name: 'Claude 3 Haiku',
+            provider: 'Anthropic',
+            input: 0.25, 
+            output: 1.25,
+            quality: 'Good',
+            speed: 'Very Fast',
+          }
+        };
+
+        let selectedModel = '';
+        let monthlyTokens = 50000000;
+        let mode = 'quick';
+
+        const formatCurrency = (num) => {
+          return new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+          }).format(num);
+        };
+
+        const formatTokens = (tokens) => {
+          if (tokens >= 1000000) {
+            return `${(tokens / 1000000).toFixed(1)}M`;
+          }
+          return new Intl.NumberFormat('en-US').format(Math.round(tokens));
+        };
+
+        function renderPage() {
+          const root = document.getElementById('root');
+          root.innerHTML = `
+            <div class="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
+              <div class="max-w-7xl mx-auto px-4 py-12">
+                <div class="text-center mb-12">
+                  <div class="inline-flex items-center justify-center w-16 h-16 bg-purple-600 rounded-2xl mb-4">
+                    <span class="text-2xl">💵</span>
+                  </div>
+                  <h1 class="text-5xl font-bold text-gray-900 mb-4">
+                    AI Token Cost Calculator
+                  </h1>
+                  <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Compare AI model costs and find out if you're overpaying. Most devs waste $500-2000/month on expensive models.
+                  </p>
+                </div>
+
+                {/* Mode Toggle */}
+                <div class="flex gap-4 mb-8 bg-white rounded-2xl p-2 shadow-lg max-w-md mx-auto">
+                  <button onclick="setMode('quick')" class="flex-1 py-3 px-6 rounded-xl font-semibold transition-all ${mode === 'quick' ? 'bg-purple-600 text-white shadow-lg' : 'text-gray-600 hover:bg-gray-100'}">
+                    Quick Calculator
+                  </button>
+                  <button onclick="setMode('exact')" class="flex-1 py-3 px-6 rounded-xl font-semibold transition-all ${mode === 'exact' ? 'bg-purple-600 text-white shadow-lg' : 'text-gray-600 hover:bg-gray-100'}">
+                    Exact Usage
+                  </button>
+                </div>
+
+                ${mode === 'quick' ? renderQuickMode() : renderExactMode()}
+              </div>
+            </div>
+          `;
+        }
+
+        function renderQuickMode() {
+          return `
+            <div class="max-w-2xl mx-auto">
+              <div class="bg-white rounded-3xl shadow-xl p-8 mb-8 border border-gray-100">
+                <div class="space-y-6">
+                  <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-3">
+                      Which model are you currently using?
+                    </label>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      ${Object.entries(models).map(([key, model]) => `
+                        <button onclick="selectModel('${key}')" class="p-4 rounded-xl border-2 transition-all text-left ${selectedModel === key ? 'border-purple-600 bg-purple-50' : 'border-gray-200 hover:border-purple-300'}">
+                          <div class="font-bold text-gray-900">${model.name}</div>
+                          <div class="text-xs text-gray-500 mt-1">${model.provider}</div>
+                          <div class="text-xs text-gray-400 mt-1">
+                            $${model.input}/$${model.output} per 1M tokens
+                          </div>
+                        </button>
+                      `).join('')}
+                    </div>
+                  </div>
+
+                  <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">
+                      Estimated monthly tokens (combined input + output)
+                    </label>
+                    <div class="space-y-2">
+                      <input type="range" min="1000000" max="200000000" step="1000000" value="${monthlyTokens}" onchange="setTokens(this.value)" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-purple-600" />
+                      <div class="flex justify-between text-sm">
+                        <span class="text-gray-500">1M tokens</span>
+                        <span class="font-bold text-purple-600">${formatTokens(monthlyTokens)} tokens/month</span>
+                        <span class="text-gray-500">200M tokens</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button onclick="calculateCosts()" class="w-full bg-purple-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-purple-700 transition-all shadow-lg hover:shadow-xl">
+                    Calculate My Costs
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        function renderExactMode() {
+          return `
+            <div class="max-w-2xl mx-auto">
+              <div class="bg-white rounded-3xl shadow-xl p-8 mb-8 border border-gray-100">
+                <div class="space-y-6">
+                  <div class="bg-blue-50 border border-blue-200 rounded-xl p-4">
+                    <div class="flex items-start gap-2">
+                      <span class="text-blue-600 text-xl">ℹ️</span>
+                      <div class="text-sm text-blue-900">
+                        <strong>Secure:</strong> Your API key is used once to fetch usage data and is never stored. All analysis happens in your browser.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">
+                      Select Provider
+                    </label>
+                    <div class="flex gap-4">
+                      <button class="flex-1 py-3 px-6 rounded-xl font-semibold bg-purple-600 text-white shadow-lg">
+                        OpenAI
+                      </button>
+                      <div class="flex-1 relative group">
+                        <button disabled class="w-full py-3 px-6 rounded-xl font-semibold bg-gray-100 text-gray-400 cursor-not-allowed opacity-60">
+                          Anthropic
+                        </button>
+                        <div class="absolute bottom-full mb-2 right-0 bg-gray-900 text-white text-xs px-3 py-2 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-auto z-10">
+                          Anthropic API doesn't offer usage endpoint yet.
+                          <a href="https://docs.anthropic.com/en/api/getting-started" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">
+                            Check docs
+                          </a>
+                          | Use Quick Calculator.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">
+                      API Key (Read-Only Access)
+                    </label>
+                    <input type="password" placeholder="sk-..." class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-600 focus:outline-none" />
+                    <p class="text-xs text-gray-500 mt-2">
+                      Get your API key from platform.openai.com/api-keys
+                    </p>
+                  </div>
+
+                  <button disabled class="w-full bg-gray-300 text-gray-500 py-4 rounded-xl font-bold text-lg cursor-not-allowed shadow-lg">
+                    Analyze Exact Usage (Demo - not functional)
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        function setMode(newMode) {
+          mode = newMode;
+          renderPage();
+        }
+
+        function selectModel(key) {
+          selectedModel = key;
+          renderPage();
+        }
+
+        function setTokens(value) {
+          monthlyTokens = parseInt(value);
+          renderPage();
+        }
+
+        function calculateCosts() {
+          if (!selectedModel) {
+            alert('Please select a model');
+            return;
+          }
+
+          const inputTokens = monthlyTokens;
+          const outputTokens = Math.floor(monthlyTokens * 0.3);
+
+          const currentModelData = models[selectedModel];
+          const currentCost = (inputTokens / 1000000) * currentModelData.input + 
+                             (outputTokens / 1000000) * currentModelData.output;
+
+          const alternatives = Object.entries(models)
+            .filter(([key]) => key !== selectedModel)
+            .map(([key, model]) => {
+              const altCost = (inputTokens / 1000000) * model.input + 
+                             (outputTokens / 1000000) * model.output;
+              return {
+                key,
+                model,
+                cost: altCost,
+                savings: currentCost - altCost,
+                savingsPercent: ((currentCost - altCost) / currentCost * 100).toFixed(1)
+              };
+            })
+            .sort((a, b) => b.savings - a.savings);
+
+          const resultsHTML = `
+            <div class="max-w-4xl mx-auto space-y-6">
+              <div class="bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl shadow-xl p-8 text-white">
+                <h2 class="text-2xl font-bold mb-6">Your Current Costs</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                  <div>
+                    <div class="text-purple-200 text-sm font-semibold mb-1">Monthly Cost</div>
+                    <div class="text-4xl font-bold">${formatCurrency(currentCost)}</div>
+                  </div>
+                  <div>
+                    <div class="text-purple-200 text-sm font-semibold mb-1">Input Tokens</div>
+                    <div class="text-4xl font-bold">${formatTokens(inputTokens)}</div>
+                  </div>
+                  <div>
+                    <div class="text-purple-200 text-sm font-semibold mb-1">Output Tokens</div>
+                    <div class="text-4xl font-bold">${formatTokens(outputTokens)}</div>
+                  </div>
+                </div>
+                
+                <div class="bg-white/10 rounded-xl p-4">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <div class="font-bold text-lg">${currentModelData.name}</div>
+                      <div class="text-sm text-purple-200">${currentModelData.provider} • ${currentModelData.quality} Quality • ${currentModelData.speed} Speed</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
+                <div class="flex items-center gap-3 mb-6">
+                  <span class="text-green-600 text-2xl">📉</span>
+                  <div>
+                    <h2 class="text-2xl font-bold text-gray-900">How Much You Could Save</h2>
+                    <p class="text-sm text-gray-500">Sorted by highest savings first</p>
+                  </div>
+                </div>
+                
+                <div class="space-y-4">
+                  ${alternatives.map((alt, idx) => `
+                    <div class="border-2 border-gray-100 rounded-2xl p-6 hover:border-purple-300 transition-all">
+                      <div class="flex items-start justify-between mb-3">
+                        <div class="flex-1">
+                          <h3 class="text-lg font-bold text-gray-900">${alt.model.name}</h3>
+                          <p class="text-sm text-gray-500">${alt.model.provider} • ${alt.model.quality} Quality • ${alt.model.speed} Speed</p>
+                          <p class="text-xs text-gray-400 mt-1">
+                            $${alt.model.input} input / $${alt.model.output} output per 1M tokens
+                          </p>
+                        </div>
+                        <div class="text-right">
+                          <div class="text-2xl font-bold text-gray-900">${formatCurrency(alt.cost)}</div>
+                          <div class="text-sm text-gray-500">per month</div>
+                        </div>
+                      </div>
+                      ${alt.savings > 0 ? `
+                        <div class="bg-green-50 border border-green-200 rounded-xl p-3 flex items-center justify-between">
+                          <div class="flex items-center gap-2">
+                            <span class="text-green-600 text-lg">⚡</span>
+                            <span class="font-semibold text-green-900">Save ${formatCurrency(alt.savings)}/month</span>
+                          </div>
+                          <span class="text-green-700 font-bold text-lg">${alt.savingsPercent}% cheaper</span>
+                        </div>
+                      ` : `
+                        <div class="bg-red-50 border border-red-200 rounded-xl p-3 text-center">
+                          <span class="text-red-600 font-semibold">${formatCurrency(Math.abs(alt.savings))}/mo more expensive</span>
+                        </div>
+                      `}
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+
+              <div class="text-center">
+                <button onclick="location.reload()" class="bg-purple-600 text-white py-3 px-8 rounded-xl font-semibold hover:bg-purple-700 transition-all">
+                  Back to Calculator
+                </button>
+              </div>
+            </div>
+          `;
+
+          document.getElementById('root').innerHTML = resultsHTML;
+        }
+
+        // Initial render
+        renderPage();
+    </script>
+</body>
+</html>

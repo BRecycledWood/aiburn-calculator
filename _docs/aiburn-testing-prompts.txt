@@ -1,0 +1,147 @@
+**`ampcode`**! That's Anthropic's agentic coding tool. Let me give you the proper approach:
+
+## Testing with ampcode
+
+Here's the correct prompt structure for `ampcode`:
+
+```bash
+ampcode "I need you to prepare my AIBurn Calculator for launch. This is a single-page web app that calculates AI API costs for builders and founders.
+
+TASKS:
+
+1. COMPREHENSIVE TESTING:
+   - Analyze the entire codebase and generate a complete test suite
+   - Create unit tests for all calculation functions
+   - Add integration tests for the price fetching mechanism
+   - Generate end-to-end tests for user workflows
+   - Test edge cases: zero values, extremely large numbers, invalid inputs, special characters
+   - Add error handling tests
+   - Create mobile responsiveness tests
+   - Test ad placement and visibility
+
+2. CODE REVIEW & BUG FIXES:
+   - Identify and fix any bugs
+   - Check for security vulnerabilities (XSS, injection attacks)
+   - Optimize performance bottlenecks
+   - Ensure proper error handling throughout
+   - Validate all user inputs are sanitized
+
+3. AUTO-UPDATE MECHANISM:
+   - Implement or review the automatic price updating system
+   - Create a script to fetch current AI API pricing from providers
+   - Set up a GitHub Actions workflow (or similar) to run daily/weekly
+   - Add error handling if price fetch fails (use cached prices)
+   - Create a timestamp for 'last updated' display
+   - Add tests for the price update mechanism
+
+4. PRE-LAUNCH CHECKLIST:
+   - Verify all calculations are accurate
+   - Ensure responsive design works on all devices
+   - Check SEO meta tags are complete
+   - Validate accessibility (WCAG compliance)
+   - Test ad integration
+   - Set up error tracking
+   - Add loading states and user feedback
+
+5. DOCUMENTATION:
+   - Create a README with setup instructions
+   - Document the price update process
+   - Add inline code comments where needed
+   - Create a deployment checklist
+
+Please implement all necessary changes, create all test files, and provide a summary of what was done."
+```
+
+## Focused Auto-Update Implementation with ampcode
+
+```bash
+ampcode "Implement an automatic price updating system for my AIBurn Calculator:
+
+REQUIREMENTS:
+
+1. Create a price fetching script (scripts/fetch-ai-prices.js) that:
+   - Fetches current pricing from OpenAI, Anthropic, Google, etc.
+   - Stores data in a JSON file (public/data/prices.json)
+   - Includes error handling and retry logic
+   - Logs update timestamp
+   - Falls back to cached prices if fetch fails
+
+2. Set up automated updates:
+   - Create GitHub Actions workflow (.github/workflows/update-prices.yml)
+   - Schedule to run daily at midnight UTC
+   - Allow manual trigger
+   - Commit updated prices automatically
+   - Send notification if update fails (optional)
+
+3. Frontend integration:
+   - Load prices from JSON file on page load
+   - Display 'last updated' timestamp
+   - Show warning if prices are > 7 days old
+   - Add manual refresh button for users
+
+4. Testing:
+   - Create tests for price fetching script
+   - Test error scenarios (API down, invalid data)
+   - Verify workflow configuration
+   - Test frontend price loading
+
+5. Monitoring:
+   - Add logging for price updates
+   - Create alerts for failed updates
+   - Track price changes over time (optional)
+
+Implement this complete system with all necessary files and configurations."
+```
+
+## Quick Pre-Launch Audit Command
+
+```bash
+ampcode "Perform a complete pre-launch audit and fix all issues in my AIBurn Calculator:
+
+RUN ALL CHECKS:
+✓ Functionality: Test all calculations and user inputs
+✓ Security: Scan for XSS, CSRF, injection vulnerabilities  
+✓ Performance: Check load times, optimize bundle size
+✓ Accessibility: WCAG 2.1 AA compliance
+✓ SEO: Meta tags, structured data, sitemap
+✓ Mobile: Responsive design on all screen sizes
+✓ Cross-browser: Chrome, Firefox, Safari, Edge
+✓ Error handling: All edge cases covered
+✓ Tests: Generate comprehensive test coverage
+✓ Price accuracy: Verify all AI pricing data is current
+✓ Ads: Test ad placement and visibility
+✓ Analytics: Verify tracking is set up
+✓ Legal: Privacy policy, terms, cookie consent
+
+Fix all issues found, create missing tests, and generate a launch readiness report with any remaining action items."
+```
+
+## What ampcode Will Do
+
+`ampcode` will:
+1. **Read your entire codebase** automatically
+2. **Generate and write test files** directly to your project
+3. **Create new files** (like GitHub Actions workflows, price fetching scripts)
+4. **Modify existing code** to fix bugs and add features
+5. **Run tests** to verify everything works
+6. **Provide a summary** of all changes made
+
+## Example Workflow
+
+```bash
+# Navigate to your project
+cd /path/to/aiburn-calculator
+
+# Run comprehensive testing and setup
+ampcode "Set up my AIBurn Calculator for launch with complete testing and auto-price updates"
+
+# After ampcode finishes, review changes
+git diff
+
+# Run the tests ampcode created
+npm test
+
+# Deploy when ready
+```
+
+Would you like me to provide more specific prompts based on your tech stack (React, Vue, vanilla JS, etc.) or help you structure the auto-update mechanism in a particular way?

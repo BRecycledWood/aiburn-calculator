@@ -1,0 +1,132 @@
+{
+  "version": "1.0.0",
+  "timestamp": "2025-11-17T00:00:00Z",
+  "source": "AIBurn Auto Price Fetcher",
+  "models": {
+    "GPT-4": {
+      "provider": "openai",
+      "input": 30,
+      "output": 60,
+      "inputUnit": 1000,
+      "outputUnit": 1000,
+      "lastUpdated": "2025-11-17T00:00:00Z"
+    },
+    "GPT-4 Turbo": {
+      "provider": "openai",
+      "input": 10,
+      "output": 30,
+      "inputUnit": 1000,
+      "outputUnit": 1000,
+      "lastUpdated": "2025-11-17T00:00:00Z"
+    },
+    "GPT-4o": {
+      "provider": "openai",
+      "input": 2.5,
+      "output": 10,
+      "inputUnit": 1000,
+      "outputUnit": 1000,
+      "lastUpdated": "2025-11-17T00:00:00Z"
+    },
+    "GPT-3.5 Turbo": {
+      "provider": "openai",
+      "input": 0.5,
+      "output": 1.5,
+      "inputUnit": 1000,
+      "outputUnit": 1000,
+      "lastUpdated": "2025-11-17T00:00:00Z"
+    },
+    "Claude 3 Opus": {
+      "provider": "anthropic",
+      "input": 15,
+      "output": 75,
+      "inputUnit": 1000,
+      "outputUnit": 1000,
+      "lastUpdated": "2025-11-17T00:00:00Z"
+    },
+    "Claude 3.5 Sonnet": {
+      "provider": "anthropic",
+      "input": 3,
+      "output": 15,
+      "inputUnit": 1000,
+      "outputUnit": 1000,
+      "lastUpdated": "2025-11-17T00:00:00Z"
+    },
+    "Claude 3 Haiku": {
+      "provider": "anthropic",
+      "input": 0.25,
+      "output": 1.25,
+      "inputUnit": 1000,
+      "outputUnit": 1000,
+      "lastUpdated": "2025-11-17T00:00:00Z"
+    },
+    "Llama 3.1 70B": {
+      "provider": "groq",
+      "input": 0.05,
+      "output": 0.08,
+      "inputUnit": 1000,
+      "outputUnit": 1000,
+      "lastUpdated": "2025-11-17T00:00:00Z"
+    },
+    "DeepSeek Chat": {
+      "provider": "deepseek",
+      "input": 0.14,
+      "output": 0.28,
+      "inputUnit": 1000,
+      "outputUnit": 1000,
+      "lastUpdated": "2025-11-17T00:00:00Z"
+    }
+  },
+  "updateLog": [
+    {
+      "model": "GPT-4",
+      "provider": "openai",
+      "status": "success"
+    },
+    {
+      "model": "GPT-4 Turbo",
+      "provider": "openai",
+      "status": "success"
+    },
+    {
+      "model": "GPT-4o",
+      "provider": "openai",
+      "status": "success"
+    },
+    {
+      "model": "GPT-3.5 Turbo",
+      "provider": "openai",
+      "status": "success"
+    },
+    {
+      "model": "Claude 3 Opus",
+      "provider": "anthropic",
+      "status": "success"
+    },
+    {
+      "model": "Claude 3.5 Sonnet",
+      "provider": "anthropic",
+      "status": "success"
+    },
+    {
+      "model": "Claude 3 Haiku",
+      "provider": "anthropic",
+      "status": "success"
+    },
+    {
+      "model": "Llama 3.1 70B",
+      "provider": "groq",
+      "status": "success"
+    },
+    {
+      "model": "DeepSeek Chat",
+      "provider": "deepseek",
+      "status": "success"
+    }
+  ],
+  "metadata": {
+    "totalModels": 9,
+    "providersUpdated": 4,
+    "successCount": 9,
+    "failureCount": 0
+  }
+}
