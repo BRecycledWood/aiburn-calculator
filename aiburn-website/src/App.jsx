@@ -100,17 +100,16 @@ function AdCard({ slot, onRotate, isAvailableSlot = false }) {
 
   if (isAvailable) {
     return (
-      <div className={`${bgGradient} rounded-2xl p-6 ${isLightBg ? 'text-slate-900' : 'text-white'} shadow-md hover:shadow-lg transition`}>
-        <h4 className="font-bold text-lg mb-1">{slot.name}</h4>
-        <p className="text-sm opacity-90 mb-4">
-          <span className="font-semibold text-base">${slot.price}</span>
-          <span className="opacity-75">/month</span>
+      <div className={`${bgGradient} rounded-2xl p-8 ${isLightBg ? 'text-slate-900' : 'text-white'} shadow-md hover:shadow-lg transition flex flex-col items-center justify-center text-center`}>
+        <h4 className="font-bold text-xl mb-2">Advertise Here</h4>
+        <p className="text-sm opacity-90 mb-6 max-w-xs">
+          Reach thousands of AI developers and engineers daily
         </p>
         <a
-          href={`mailto:contact@aiburn.howstud.io?subject=${encodeURIComponent(`Advertising Inquiry - ${slot.name}`)}`}
-          className={`text-sm ${isLightBg ? 'bg-slate-900' : 'bg-white'} bg-opacity-20 hover:bg-opacity-30 px-3 py-2 rounded-lg inline-block transition font-semibold`}
+          href="/advertise"
+          className={`text-sm ${isLightBg ? 'bg-slate-900' : 'bg-white'} bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg inline-block transition font-semibold`}
         >
-          Inquire →
+          Contact Us →
         </a>
       </div>
     )
@@ -360,7 +359,7 @@ export default function App() {
       .replace(/[<>"'&]/g, '')
       .substring(0, 50)
 
-    const text = `I analyzed my AI token costs using @howstudio's calculator and discovered I could save $${savings.toFixed(2)} monthly by switching to ${modelName}. Current spending: $${currentCost.toFixed(2)}/month. Check the ROI on your AI stack → aiburn.howstud.io`
+    const text = `I analyzed my AI token costs using @tryaiburn and discovered I could save $${savings.toFixed(2)} monthly by switching to ${modelName}. Current spending: $${currentCost.toFixed(2)}/month. Check the ROI on your AI stack → aiburn.howstud.io`
 
     const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`
     window.open(url, '_blank', 'width=550,height=420')
@@ -508,13 +507,12 @@ export default function App() {
           <div className="lg:col-span-1" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             {Array.from({ length: 12 }).map((_, i) => (
               <div key={`left-${i}`} className="bg-gradient-to-r from-slate-200 to-slate-300 rounded-2xl p-8 text-slate-900 shadow-md min-h-40 flex flex-col items-center justify-center text-center">
-                <h4 className="font-bold text-lg mb-2">Ad Slot {i + 1}</h4>
+                <h4 className="font-bold text-lg mb-2">Advertise Here</h4>
                 <p className="text-sm opacity-90 mb-6">
-                  <span className="font-semibold text-base">$399.99</span>
-                  <span className="opacity-75">/month</span>
+                  Reach thousands of AI developers
                 </p>
-                <a href={`mailto:contact@aiburn.howstud.io?subject=${encodeURIComponent('Advertising Inquiry')}`} className="text-sm bg-slate-900 bg-opacity-20 hover:bg-opacity-30 px-3 py-2 rounded-lg inline-block transition font-semibold text-slate-900">
-                   Inquire →
+                <a href="/advertise" className="text-sm bg-slate-900 bg-opacity-20 hover:bg-opacity-30 px-3 py-2 rounded-lg inline-block transition font-semibold text-slate-900">
+                   Contact Us →
                  </a>
               </div>
             ))}
@@ -907,13 +905,12 @@ export default function App() {
           <div className="lg:col-span-1" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             {Array.from({ length: 12 }).map((_, i) => (
               <div key={`right-${i}`} className="bg-gradient-to-r from-slate-200 to-slate-300 rounded-2xl p-8 text-slate-900 shadow-md min-h-40 flex flex-col items-center justify-center text-center">
-                <h4 className="font-bold text-lg mb-2">Ad Slot {i + 1}</h4>
+                <h4 className="font-bold text-lg mb-2">Advertise Here</h4>
                 <p className="text-sm opacity-90 mb-6">
-                  <span className="font-semibold text-base">$399</span>
-                  <span className="opacity-75">/month</span>
+                  Reach thousands of AI developers
                 </p>
-                <a href={`mailto:contact@aiburn.howstud.io?subject=${encodeURIComponent('Advertising Inquiry')}`} className="text-sm bg-slate-900 bg-opacity-20 hover:bg-opacity-30 px-3 py-2 rounded-lg inline-block transition font-semibold text-slate-900">
-                  Inquire →
+                <a href="/advertise" className="text-sm bg-slate-900 bg-opacity-20 hover:bg-opacity-30 px-3 py-2 rounded-lg inline-block transition font-semibold text-slate-900">
+                  Contact Us →
                 </a>
                 </div>
                 ))}
@@ -943,7 +940,7 @@ export default function App() {
               </a>
               . AI token prices current as of Nov 2025.
             </p>
-            <div className="mt-4 flex justify-center gap-6">
+            <div className="mt-4 flex justify-center gap-6 flex-wrap">
               <a
                 href="/pages/privacy.html"
                 className="text-slate-600 hover:text-purple-600 transition"
@@ -955,6 +952,39 @@ export default function App() {
                 className="text-slate-600 hover:text-purple-600 transition"
               >
                 Terms of Service
+              </a>
+              <a
+                href="/advertise"
+                className="text-slate-600 hover:text-purple-600 transition"
+              >
+                Advertise
+              </a>
+              <a
+                href="mailto:tryaiburn@howstud.io"
+                className="text-slate-600 hover:text-purple-600 transition"
+              >
+                Contact
+              </a>
+            </div>
+            <div className="mt-6 flex justify-center gap-4">
+              <a
+                href="https://instagram.com/tryaiburn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-600 hover:text-purple-600 transition font-semibold"
+                aria-label="Instagram"
+              >
+                Instagram
+              </a>
+              <span className="text-slate-400">•</span>
+              <a
+                href="https://x.com/tryaiburn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-600 hover:text-purple-600 transition font-semibold"
+                aria-label="X/Twitter"
+              >
+                X
               </a>
             </div>
           </div>

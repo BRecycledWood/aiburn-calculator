@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIBurn Ad Placement Examples</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f8fafc;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 40px;
+        }
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .section h2 {
+            color: #1e293b;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .ad-specs {
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            color: #475569;
+        }
+        .ad-specs strong {
+            color: #1e293b;
+        }
+
+        /* Header Banner */
+        .header-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header-banner .text {
+            flex: 1;
+        }
+        .header-banner h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .header-banner p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .header-banner .cta {
+            background: white;
+            color: #667eea;
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            white-space: nowrap;
+            font-size: 14px;
+        }
+
+        /* Sidebar Ad */
+        .sidebar-ad {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            max-width: 300px;
+        }
+        .sidebar-ad h3 {
+            color: #1e293b;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .sidebar-ad p {
+            color: #64748b;
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .sidebar-ad .cta {
+            display: block;
+            background: #3b82f6;
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .sidebar-ad .cta:hover {
+            background: #2563eb;
+        }
+
+        /* In-Content Ad */
+        .content-ad {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .content-ad .label {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #92400e;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+        .content-ad h3 {
+            color: #1e293b;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .content-ad p {
+            color: #475569;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        .content-ad a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        /* Footer Banner */
+        .footer-banner {
+            background: #1e293b;
+            color: white;
+            padding: 25px 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .footer-banner h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        .footer-banner p {
+            opacity: 0.8;
+            margin-bottom: 15px;
+        }
+        .footer-banner .cta {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Comparison Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .note {
+            background: #eff6ff;
+            border-left: 3px solid #3b82f6;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #1e40af;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AIBurn Ad Placement Options</h1>
+        <p class="subtitle">Text-based advertising formats with dimensions & specifications</p>
+
+        <!-- Header Banner -->
+        <div class="section">
+            <h2>1. Header Banner (Rotating)</h2>
+            <div class="ad-specs">
+                <strong>Size:</strong> Full width × 80-100px height<br>
+                <strong>Position:</strong> Top of page, below logo<br>
+                <strong>Format:</strong> Text + CTA button<br>
+                <strong>Rotation:</strong> 15 seconds (if multiple advertisers)<br>
+                <strong>Visibility:</strong> Highest - seen by 100% of visitors
+            </div>
+
+            <div class="header-banner">
+                <div class="text">
+                    <h3>Your Product Name - One-Line Headline Here</h3>
+                    <p>Brief description of your product and value prop (max 12 words)</p>
+                </div>
+                <a href="#" class="cta">Learn More →</a>
+            </div>
+
+            <div class="note">
+                <strong>💡 Example:</strong> "Superbase - The Open Source Firebase Alternative. Build faster with real-time APIs."
+            </div>
+        </div>
+
+        <!-- Sidebar Ads -->
+        <div class="section">
+            <h2>2. Sidebar Ad Slots</h2>
+            <div class="ad-specs">
+                <strong>Size:</strong> 300px × 250px (standard)<br>
+                <strong>Position:</strong> Right sidebar, fixed scroll<br>
+                <strong>Format:</strong> Headline + description + CTA<br>
+                <strong>Rotation:</strong> Static (always visible)<br>
+                <strong>Visibility:</strong> High - seen during scroll
+            </div>
+
+            <div class="grid">
+                <div class="sidebar-ad">
+                    <h3>Your Product Name</h3>
+                    <p>Brief description of what you offer and why it matters to AI builders (2-3 lines max).</p>
+                    <a href="#" class="cta">Get Started</a>
+                </div>
+
+                <div class="sidebar-ad" style="border-color: #8b5cf6;">
+                    <h3>Another Product</h3>
+                    <p>Different color scheme example. Keep text concise and benefit-focused for best results.</p>
+                    <a href="#" class="cta" style="background: #8b5cf6;">Try Free</a>
+                </div>
+
+                <div class="sidebar-ad" style="border-color: #10b981;">
+                    <h3>Third Example</h3>
+                    <p>Green variant. Focus on your unique value prop and clear call-to-action.</p>
+                    <a href="#" class="cta" style="background: #10b981;">View Demo</a>
+                </div>
+            </div>
+
+            <div class="note">
+                <strong>💡 Example:</strong> "LangChain - Build AI apps faster. Production-ready LLM framework trusted by 50K+ developers."
+            </div>
+        </div>
+
+        <!-- In-Content Ad -->
+        <div class="section">
+            <h2>3. In-Content Sponsored Callout</h2>
+            <div class="ad-specs">
+                <strong>Size:</strong> Full width × auto height<br>
+                <strong>Position:</strong> Between calculation results<br>
+                <strong>Format:</strong> Labeled sponsorship with headline + description<br>
+                <strong>Rotation:</strong> Static or rotating<br>
+                <strong>Visibility:</strong> Very high - seen after calculation
+            </div>
+
+            <div class="content-ad">
+                <div class="label">Sponsored</div>
+                <h3>Your Product Name - Why AI Builders Choose Us</h3>
+                <p>One or two sentences about what you do and why it's relevant to someone who just calculated AI costs. Keep it conversational and helpful.</p>
+                <a href="#">Learn more about [Product] →</a>
+            </div>
+
+            <div class="note">
+                <strong>💡 Example:</strong> "Pinecone - Scale your vector database without the headache. Built for AI applications that need speed and reliability."
+            </div>
+        </div>
+
+        <!-- Footer Banner -->
+        <div class="section">
+            <h2>4. Footer Banner</h2>
+            <div class="ad-specs">
+                <strong>Size:</strong> Full width × 120-150px height<br>
+                <strong>Position:</strong> Bottom of page<br>
+                <strong>Format:</strong> Centered headline + description + CTA<br>
+                <strong>Rotation:</strong> Static<br>
+                <strong>Visibility:</strong> Medium - seen by engaged users who scroll
+            </div>
+
+            <div class="footer-banner">
+                <h3>Ready to Build? We Can Help</h3>
+                <p>Your product description here - one line that captures attention and drives action</p>
+                <a href="#" class="cta">Start Building →</a>
+            </div>
+
+            <div class="note">
+                <strong>💡 Example:</strong> "Replicate - Run AI models in the cloud. Pay per second, scale instantly, ship faster."
+            </div>
+        </div>
+
+        <!-- Specifications Table -->
+        <div class="section">
+            <h2>📋 Ad Specifications Summary</h2>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                <thead style="background: #f1f5f9;">
+                    <tr>
+                        <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e2e8f0;">Placement</th>
+                        <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e2e8f0;">Dimensions</th>
+                        <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e2e8f0;">Content Limits</th>
+                        <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e2e8f0;">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;"><strong>Header Banner</strong></td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;">Full width × 80-100px</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;">
+                            Headline: 50 chars<br>
+                            Description: 80 chars<br>
+                            CTA: 15 chars
+                        </td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;"><strong>Contact for pricing</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;"><strong>Sidebar Ad</strong></td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;">300px × 250px</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;">
+                            Headline: 30 chars<br>
+                            Description: 120 chars<br>
+                            CTA: 15 chars
+                        </td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;"><strong>Contact for pricing</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;"><strong>In-Content</strong></td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;">Full width × auto</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;">
+                            Headline: 60 chars<br>
+                            Description: 200 chars<br>
+                            CTA: 25 chars
+                        </td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;"><strong>Contact for pricing</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px;"><strong>Footer Banner</strong></td>
+                        <td style="padding: 12px;">Full width × 120-150px</td>
+                        <td style="padding: 12px;">
+                            Headline: 50 chars<br>
+                            Description: 100 chars<br>
+                            CTA: 20 chars
+                        </td>
+                        <td style="padding: 12px;"><strong>Contact for pricing</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="note" style="margin-top: 20px;">
+                <strong>📧 Interested in advertising?</strong> Contact tryaiburn@howstud.io to discuss placements, pricing, and get access to your analytics dashboard.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
