@@ -1178,11 +1178,6 @@ function Calculator() {
                   )}
           </div>
 
-          {/* Full-Width Featured Ad - Spans all 5 columns between center and right sidebar */}
-          <div className="lg:col-span-5 order-2.5">
-            <AdCard slot={featureAdSlot} />
-          </div>
-
           {/* Right Sidebar - Advertising (20%) - 7 Cards - Hidden on mobile, order 3 on desktop */}
           <div className="lg:col-span-1 hidden lg:block order-3" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             {Array.from({ length: 7 }).map((_, i) => (
@@ -1199,6 +1194,11 @@ function Calculator() {
                 </div>
                 </div>
                 </div>
+
+          {/* Full-Width Featured Ad - Above Footer */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <AdCard slot={featureAdSlot} />
+          </div>
 
                 {/* Footer */}
       <footer className="bg-white border-t border-slate-200 mt-12">
