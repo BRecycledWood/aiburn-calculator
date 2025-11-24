@@ -2,11 +2,21 @@
 
 ## Summary
 
-Implemented 10 of 15 critical testing feedback items from the manual testing report. Build passes with 0 errors, bundle size at 83.29 KB gzipped (target <100KB).
+Implemented 11 of 15 critical testing feedback items from the manual testing report. Build passes with 0 errors, bundle size at 83.29 KB gzipped (target <100KB). Critical bug in savings calculation fixed.
 
 ---
 
 ## ✅ COMPLETED IMPLEMENTATIONS
+
+### 0. Savings Calculation Bug Fixed
+**Issue**: All models showed identical savings (monthly spend repeated for each)
+**Root Cause**: Division by 1,000,000 when input/output tokens already in millions
+**Fix**:
+- Changed: `const cost = (inputTokens * pricing.input + outputTokens * pricing.output) / 1000000`
+- To: `const cost = inputTokens * pricing.input + outputTokens * pricing.output`
+- Result: Each model now shows correct individual savings
+- Example: 6M input + 4M output saves $51.70/month with GPT-4o mini vs $55 with GPT-4o
+- Verification: Build passes, logic confirmed via calculation test
 
 ### 1. Missing Models Added
 **Issue**: GPT-4o mini and Gemini 2.0 Flash not in dropdown
@@ -132,6 +142,7 @@ Implemented 10 of 15 critical testing feedback items from the manual testing rep
 
 | Test Section | Issue | Status | Notes |
 |---|---|---|---|
+| 1.1: Model Selection | Identical savings | ✅ FIXED | Removed erroneous /1M division |
 | 1.1: Model Selection | Missing models | ✅ FIXED | Added GPT-4o mini, Gemini 2.0 Flash |
 | 1.1: Model Selection | No pricing display | ✅ FIXED | Added pricing section with rates |
 | 1.2: Token Slider | Hard to use | ✅ FIXED | Added manual entry field |
