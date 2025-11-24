@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import {
   Download,
   Share2,
@@ -10,6 +11,9 @@ import {
   X,
   Loader,
 } from 'lucide-react'
+import AdvertisePage from './components/AdvertisePage'
+import PrivacyPage from './components/PrivacyPage'
+import TermsPage from './components/TermsPage'
 
 // Model pricing data (per 1M tokens)
 const MODELS = {
@@ -136,19 +140,28 @@ function AdCard({ slot, onRotate, isAvailableSlot = false }) {
   )
 }
 
-// Main App Component
-export default function App() {
+// Main Calculator Component
+function Calculator() {
   const [mode, setMode] = useState('quick') // 'quick' or 'exact'
   const [selectedModel, setSelectedModel] = useState('GPT-4o')
   const [monthlyTokens, setMonthlyTokens] = useState(10)
-  const [inputRatio, setInputRatio] = useState(60) // % of tokens that are input
-  const [outputRatio, setOutputRatio] = useState(40) // % of tokens that are output
+  const [inputTokens, setInputTokens] = useState(6) // actual M tokens for input
+  const [outputTokens, setOutputTokens] = useState(4) // actual M tokens for output
   const [provider, setProvider] = useState('openai')
   const [apiKey, setApiKey] = useState('')
   const [loading, setLoading] = useState(false)
   const [results, setResults] = useState(null)
   const [error, setError] = useState('')
   const [currentFeatureAd, setCurrentFeatureAd] = useState(0)
+  const [emailCapture, setEmailCapture] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    jobTitle: '',
+  })
+  const [emailSubmitting, setEmailSubmitting] = useState(false)
+  const [emailSubmitted, setEmailSubmitted] = useState(false)
 
   // Rotate featured ads every 10 seconds
   useEffect(() => {
@@ -175,11 +188,10 @@ export default function App() {
   // Calculate costs in Quick mode
   const calculateCosts = () => {
     const model = MODELS[selectedModel]
-    const tokens = monthlyTokens * 1000000
-    const inputTokens = tokens * (inputRatio / 100)
-    const outputTokens = tokens * (outputRatio / 100)
+    const inputTokensM = inputTokens * 1000000
+    const outputTokensM = outputTokens * 1000000
 
-    const currentCost = (inputTokens * model.input + outputTokens * model.output) / 1000000
+    const currentCost = (inputTokensM * model.input + outputTokensM * model.output) / 1000000
     const dailyCost = currentCost / 30
 
     // Generate alternatives
@@ -215,12 +227,10 @@ export default function App() {
       mode: 'quick',
       selectedModel,
       monthlyTokens,
-      inputRatio,
-      outputRatio,
+      inputTokens,
+      outputTokens,
       currentCost: currentCost.toFixed(2),
       dailyCost: dailyCost.toFixed(2),
-      inputTokens: Math.floor(inputTokens),
-      outputTokens: Math.floor(outputTokens),
       inputCostPerUnit: model.input,
       outputCostPerUnit: model.output,
       alternatives: alternatives.slice(0, 8),
@@ -442,7 +452,51 @@ export default function App() {
     link.href = canvas.toDataURL('image/png')
     link.download = `aiburn-analysis-${Date.now()}.png`
     link.click()
-  }
+    }
+
+    // Handle email capture submission
+    const handleEmailCapture = async (e) => {
+    e.preventDefault()
+    
+    // Validate required fields
+    if (!emailCapture.name.trim() || !emailCapture.email.trim()) {
+     setError('Name and email are required')
+     return
+    }
+
+    setEmailSubmitting(true)
+    
+    try {
+     // Submit to FormSubmit which will email to tryaiburn@howstud.io
+     const formData = new FormData()
+     formData.append('name', emailCapture.name)
+     formData.append('email', emailCapture.email)
+     formData.append('phone', emailCapture.phone)
+     formData.append('company', emailCapture.company)
+     formData.append('jobTitle', emailCapture.jobTitle)
+     formData.append('_subject', 'AIBurn Cost Analysis Report')
+     formData.append('_captcha', 'false')
+
+     const response = await fetch('https://formsubmit.co/tryaiburn@howstud.io', {
+       method: 'POST',
+       body: formData,
+     })
+
+     if (response.ok) {
+       setEmailSubmitted(true)
+       setEmailCapture({ name: '', email: '', phone: '', company: '', jobTitle: '' })
+       
+       // Reset after 5 seconds
+       setTimeout(() => {
+         setEmailSubmitted(false)
+       }, 5000)
+     }
+    } catch (err) {
+     console.error('Email capture error:', err)
+    } finally {
+     setEmailSubmitting(false)
+    }
+    }
 
   // Get feature ad to display
   const featureSlots = AD_SLOTS.filter((s) => s.placement === 'content-featured')
@@ -523,12 +577,23 @@ export default function App() {
             {/* Quick Calculator Mode */}
              {mode === 'quick' && (
                <div className="space-y-8">
-                 {/* Trust Badge */}
-                 <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-2xl p-4 flex items-center gap-3">
-                   <span className="text-2xl">✓</span>
-                   <div className="text-sm">
-                     <p className="font-semibold text-green-900">100% Private • Zero Data Storage</p>
-                     <p className="text-green-800 text-xs">Your analysis never leaves your browser. Completely anonymous.</p>
+                 {/* Privacy Badge */}
+                 <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-2xl p-4 flex items-start gap-3">
+                   <span className="text-2xl">🔒</span>
+                   <div className="text-sm flex-1">
+                     <p className="font-semibold text-blue-900 mb-2">Your Calculations Stay Private</p>
+                     <ul className="text-blue-800 text-xs space-y-1">
+                       <li>• API keys never stored</li>
+                       <li>• Calculations processed in your browser</li>
+                       <li>• Email capture is optional</li>
+                       <li>• No account required</li>
+                     </ul>
+                     <a 
+                       href="/privacy"
+                       className="text-blue-600 hover:text-blue-700 font-semibold text-xs mt-2 inline-block"
+                     >
+                       Read full privacy policy →
+                     </a>
                    </div>
                  </div>
 
@@ -586,69 +651,70 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Input/Output Ratio */}
-                <div className="bg-white rounded-3xl p-8 shadow-md">
-                  <h2 className="text-2xl font-bold text-slate-900 mb-6">
-                    Step 2.5: Input vs Output Ratio
-                  </h2>
-                  <p className="text-slate-600 text-sm mb-6">
-                    Output tokens are more expensive. Adjust the ratio to match your usage pattern (chatbot, search, etc.).
-                  </p>
-                  
-                  <div className="space-y-6">
-                    {/* Input Ratio Slider */}
-                    <div>
-                      <div className="flex justify-between items-center mb-3">
-                        <label className="font-semibold text-slate-900">Input Tokens</label>
-                        <div className="text-lg font-bold text-blue-600">{inputRatio}%</div>
-                      </div>
-                      <input
-                        type="range"
-                        min="0"
-                        max="100"
-                        value={inputRatio}
-                        onChange={(e) => {
-                          const newInput = Number(e.target.value)
-                          setInputRatio(newInput)
-                          setOutputRatio(100 - newInput)
-                        }}
-                        className="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
-                      />
-                      <p className="text-xs text-slate-500 mt-2">
-                        {monthlyTokens * (inputRatio / 100)}M input tokens/month
-                      </p>
-                    </div>
+                {/* Input/Output Token Breakdown */}
+                 <div className="bg-white rounded-3xl p-8 shadow-md">
+                   <h2 className="text-2xl font-bold text-slate-900 mb-6">
+                     Step 2.5: Input vs Output Tokens
+                   </h2>
+                   <p className="text-slate-600 text-sm mb-6">
+                     Output tokens are more expensive. Split your {monthlyTokens}M monthly tokens between input and output.
+                   </p>
+                   
+                   <div className="space-y-6">
+                     {/* Input Tokens Slider */}
+                     <div>
+                       <div className="flex justify-between items-center mb-3">
+                         <label className="font-semibold text-slate-900">Input Tokens (M)</label>
+                         <div className="text-lg font-bold text-blue-600">{inputTokens.toFixed(1)}</div>
+                       </div>
+                       <input
+                         type="range"
+                         min="0"
+                         max={monthlyTokens}
+                         step="0.1"
+                         value={inputTokens}
+                         onChange={(e) => {
+                           setInputTokens(Number(e.target.value))
+                         }}
+                         className="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                       />
+                       <p className="text-xs text-slate-500 mt-2">
+                         {inputTokens.toFixed(1)}M input tokens/month
+                       </p>
+                     </div>
 
-                    {/* Output Ratio Slider */}
-                    <div>
-                      <div className="flex justify-between items-center mb-3">
-                        <label className="font-semibold text-slate-900">Output Tokens</label>
-                        <div className="text-lg font-bold text-green-600">{outputRatio}%</div>
-                      </div>
-                      <input
-                        type="range"
-                        min="0"
-                        max="100"
-                        value={outputRatio}
-                        onChange={(e) => {
-                          const newOutput = Number(e.target.value)
-                          setOutputRatio(newOutput)
-                          setInputRatio(100 - newOutput)
-                        }}
-                        className="w-full h-2 bg-green-200 rounded-lg appearance-none cursor-pointer accent-green-600"
-                      />
-                      <p className="text-xs text-slate-500 mt-2">
-                        {monthlyTokens * (outputRatio / 100)}M output tokens/month
-                      </p>
-                    </div>
-                  </div>
+                     {/* Output Tokens Slider */}
+                     <div>
+                       <div className="flex justify-between items-center mb-3">
+                         <label className="font-semibold text-slate-900">Output Tokens (M)</label>
+                         <div className="text-lg font-bold text-green-600">{outputTokens.toFixed(1)}</div>
+                       </div>
+                       <input
+                         type="range"
+                         min="0"
+                         max={monthlyTokens}
+                         step="0.1"
+                         value={outputTokens}
+                         onChange={(e) => {
+                           setOutputTokens(Number(e.target.value))
+                         }}
+                         className="w-full h-2 bg-green-200 rounded-lg appearance-none cursor-pointer accent-green-600"
+                       />
+                       <p className="text-xs text-slate-500 mt-2">
+                         {outputTokens.toFixed(1)}M output tokens/month
+                       </p>
+                     </div>
+                   </div>
 
-                  <div className="mt-6 p-3 bg-slate-50 rounded-lg">
-                    <p className="text-xs text-slate-600">
-                      <strong>Common patterns:</strong> Chatbot (60/40), Search (80/20), Code generation (70/30)
-                    </p>
-                  </div>
-                </div>
+                   <div className="mt-6 p-3 bg-slate-50 rounded-lg">
+                     <p className="text-xs text-slate-600 mb-2">
+                       <strong>Total allocated:</strong> {(inputTokens + outputTokens).toFixed(1)}M / {monthlyTokens}M tokens
+                     </p>
+                     <p className="text-xs text-slate-600">
+                       <strong>Common patterns:</strong> Chatbot (6M/4M), Search (8M/2M), Code generation (7M/3M)
+                     </p>
+                   </div>
+                 </div>
 
                 {/* Ad: Featured Rotating */}
                 <div>
@@ -816,14 +882,14 @@ export default function App() {
                             <div>
                               <p className="text-xs text-purple-200 mb-1">Input</p>
                               <p className="text-lg font-bold text-white mb-2">
-                                {(results.inputTokens / 1000000).toFixed(1)}M
+                                {results.inputTokens.toFixed(1)}M
                               </p>
                               <p className="text-xs text-purple-200">${results.inputCostPerUnit}/1M</p>
                             </div>
                             <div>
                               <p className="text-xs text-purple-200 mb-1">Output</p>
                               <p className="text-lg font-bold text-white mb-2">
-                                {(results.outputTokens / 1000000).toFixed(1)}M
+                                {results.outputTokens.toFixed(1)}M
                               </p>
                               <p className="text-xs text-purple-200">${results.outputCostPerUnit}/1M</p>
                             </div>
@@ -850,8 +916,8 @@ export default function App() {
                              {results.mode === 'quick' && (
                                <div className="text-xs text-slate-600 space-y-1">
                                  <div className="flex gap-6 mb-2">
-                                   <span>Input: <span className="font-semibold text-slate-900">{(results.inputTokens / 1000000).toFixed(1)}M @ ${alt.costPerInputUnit}/1M</span></span>
-                                   <span>Output: <span className="font-semibold text-slate-900">{(results.outputTokens / 1000000).toFixed(1)}M @ ${alt.costPerOutputUnit}/1M</span></span>
+                                   <span>Input: <span className="font-semibold text-slate-900">{results.inputTokens.toFixed(1)}M @ ${alt.costPerInputUnit}/1M</span></span>
+                                   <span>Output: <span className="font-semibold text-slate-900">{results.outputTokens.toFixed(1)}M @ ${alt.costPerOutputUnit}/1M</span></span>
                                  </div>
                                </div>
                              )}
@@ -896,9 +962,116 @@ export default function App() {
                       Download Report
                     </button>
                   </div>
-                </div>
-              </div>
-            )}
+
+                  {/* Email Capture Form */}
+                  {!emailSubmitted && (
+                    <div className="border-t border-slate-200 px-8 py-8 bg-white">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">📊 Get Your Results Emailed</h3>
+                      <p className="text-slate-600 text-sm mb-6">
+                        We'll send you this cost breakdown and monthly AI cost optimization tips.
+                      </p>
+
+                      <form onSubmit={handleEmailCapture} className="space-y-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div>
+                            <label className="block text-sm font-semibold text-slate-900 mb-2">
+                              Name *
+                            </label>
+                            <input
+                              type="text"
+                              required
+                              value={emailCapture.name}
+                              onChange={(e) => setEmailCapture({ ...emailCapture, name: e.target.value })}
+                              className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+                              placeholder="Your name"
+                            />
+                          </div>
+
+                          <div>
+                            <label className="block text-sm font-semibold text-slate-900 mb-2">
+                              Email *
+                            </label>
+                            <input
+                              type="email"
+                              required
+                              value={emailCapture.email}
+                              onChange={(e) => setEmailCapture({ ...emailCapture, email: e.target.value })}
+                              className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+                              placeholder="your@email.com"
+                            />
+                          </div>
+
+                          <div>
+                            <label className="block text-sm font-semibold text-slate-900 mb-2">
+                              Phone
+                            </label>
+                            <input
+                              type="tel"
+                              value={emailCapture.phone}
+                              onChange={(e) => setEmailCapture({ ...emailCapture, phone: e.target.value })}
+                              className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+                              placeholder="(optional)"
+                            />
+                          </div>
+
+                          <div>
+                            <label className="block text-sm font-semibold text-slate-900 mb-2">
+                              Company
+                            </label>
+                            <input
+                              type="text"
+                              value={emailCapture.company}
+                              onChange={(e) => setEmailCapture({ ...emailCapture, company: e.target.value })}
+                              className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+                              placeholder="(optional)"
+                            />
+                          </div>
+
+                          <div className="md:col-span-2">
+                            <label className="block text-sm font-semibold text-slate-900 mb-2">
+                              Job Title
+                            </label>
+                            <input
+                              type="text"
+                              value={emailCapture.jobTitle}
+                              onChange={(e) => setEmailCapture({ ...emailCapture, jobTitle: e.target.value })}
+                              className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+                              placeholder="(optional)"
+                            />
+                          </div>
+                        </div>
+
+                        <div className="flex gap-3 pt-4">
+                          <button
+                            type="submit"
+                            disabled={emailSubmitting}
+                            className="flex-1 bg-purple-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-purple-700 transition disabled:opacity-50"
+                          >
+                            {emailSubmitting ? 'Sending...' : 'Send My Report'}
+                          </button>
+                        </div>
+
+                        <p className="text-xs text-slate-500 text-center">
+                          We respect your privacy. <a href="/privacy" className="text-purple-600 hover:text-purple-700">Read our privacy policy</a>
+                        </p>
+                      </form>
+                    </div>
+                  )}
+
+                  {emailSubmitted && (
+                    <div className="border-t border-slate-200 px-8 py-8 bg-green-50">
+                      <div className="flex items-center gap-3">
+                        <span className="text-2xl">✅</span>
+                        <div>
+                          <h3 className="font-semibold text-green-900">Report sent!</h3>
+                          <p className="text-sm text-green-800">Check your email for your cost analysis report.</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  </div>
+                  </div>
+                  )}
           </div>
 
           {/* Right Sidebar - Advertising (20%) - 12 Cards */}
@@ -942,13 +1115,13 @@ export default function App() {
             </p>
             <div className="mt-4 flex justify-center gap-6 flex-wrap">
               <a
-                href="/pages/privacy.html"
+                href="/privacy"
                 className="text-slate-600 hover:text-purple-600 transition"
               >
                 Privacy Policy
               </a>
               <a
-                href="/pages/terms.html"
+                href="/terms"
                 className="text-slate-600 hover:text-purple-600 transition"
               >
                 Terms of Service
@@ -963,7 +1136,7 @@ export default function App() {
                 href="mailto:tryaiburn@howstud.io"
                 className="text-slate-600 hover:text-purple-600 transition"
               >
-                Contact
+                Contact: tryaiburn@howstud.io
               </a>
             </div>
             <div className="mt-6 flex justify-center gap-4">
@@ -991,5 +1164,19 @@ export default function App() {
         </div>
       </footer>
     </div>
+  )
+}
+
+// Router App Component
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Calculator />} />
+        <Route path="/advertise" element={<AdvertisePage />} />
+        <Route path="/privacy" element={<PrivacyPage />} />
+        <Route path="/terms" element={<TermsPage />} />
+      </Routes>
+    </Router>
   )
 }

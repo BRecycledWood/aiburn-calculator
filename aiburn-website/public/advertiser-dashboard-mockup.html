@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIBurn Advertiser Dashboard - Sample</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 0;
+            min-height: 100vh;
+        }
+        .navbar {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 16px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .navbar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar h2 {
+            margin: 0;
+            color: #1e293b;
+            font-size: 18px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 12px;
+        }
+        .nav-links a {
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .nav-links a.back {
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+        .nav-links a.back:hover {
+            background: #e2e8f0;
+            color: #0f172a;
+        }
+        .nav-links a.advertise {
+            background: #7c3aed;
+            color: white;
+        }
+        .nav-links a.advertise:hover {
+            background: #6d28d9;
+        }
+        .wrapper {
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .dashboard {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 30px;
+        }
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        .header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            background: #f8fafc;
+        }
+        .stat-card {
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 4px solid;
+        }
+        .stat-card.blue { border-left-color: #3b82f6; }
+        .stat-card.purple { border-left-color: #8b5cf6; }
+        .stat-card.green { border-left-color: #10b981; }
+        .stat-card.orange { border-left-color: #f59e0b; }
+        .stat-label {
+            color: #64748b;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        .stat-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 8px;
+        }
+        .stat-change {
+            font-size: 13px;
+            color: #10b981;
+        }
+        .stat-change.negative {
+            color: #ef4444;
+        }
+        .content {
+            padding: 30px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            font-size: 20px;
+            color: #1e293b;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .chart-placeholder {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 250px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .bars {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 180px;
+            width: 80%;
+            gap: 10px;
+        }
+        .bar {
+            background: rgba(255,255,255,0.3);
+            width: 100%;
+            border-radius: 4px 4px 0 0;
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .table th {
+            background: #f1f5f9;
+            padding: 16px;
+            text-align: left;
+            font-size: 13px;
+            font-weight: 600;
+            color: #475569;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .table td {
+            padding: 16px;
+            border-top: 1px solid #e2e8f0;
+            color: #334155;
+        }
+        .table tr:hover {
+            background: #f8fafc;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .badge.high {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .badge.medium {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        .badge.low {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+        .footer-note {
+            background: #f1f5f9;
+            padding: 20px 30px;
+            color: #64748b;
+            font-size: 13px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-content">
+            <h2>Advertiser Dashboard Preview</h2>
+            <div class="nav-links">
+                <a href="/advertise" class="advertise">← Back to Advertise</a>
+                <a href="/" class="back">← Back to Calculator</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+    <div class="dashboard">
+        <div class="header">
+            <h1>📊 Your Advertising Dashboard</h1>
+            <p>Campaign: Header Banner Slot #2 • Updated: November 22, 2025</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card blue">
+                <div class="stat-label">Total Impressions</div>
+                <div class="stat-value">127,450</div>
+                <div class="stat-change">↑ 12.3% vs last month</div>
+            </div>
+            <div class="stat-card purple">
+                <div class="stat-label">Total Clicks</div>
+                <div class="stat-value">3,847</div>
+                <div class="stat-change">↑ 8.5% vs last month</div>
+            </div>
+            <div class="stat-card green">
+                <div class="stat-label">Click Rate (CTR)</div>
+                <div class="stat-value">3.02%</div>
+                <div class="stat-change">Above 2.8% benchmark</div>
+            </div>
+            <div class="stat-card orange">
+                <div class="stat-label">Conversions</div>
+                <div class="stat-value">142</div>
+                <div class="stat-change">3.69% conversion rate</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>📈 Performance Over Time</h2>
+                <div class="chart-placeholder">
+                    <div class="bars">
+                        <div class="bar" style="height: 45%;"></div>
+                        <div class="bar" style="height: 52%;"></div>
+                        <div class="bar" style="height: 48%;"></div>
+                        <div class="bar" style="height: 65%;"></div>
+                        <div class="bar" style="height: 58%;"></div>
+                        <div class="bar" style="height: 72%;"></div>
+                        <div class="bar" style="height: 68%;"></div>
+                        <div class="bar" style="height: 75%;"></div>
+                        <div class="bar" style="height: 82%;"></div>
+                        <div class="bar" style="height: 78%;"></div>
+                        <div class="bar" style="height: 88%;"></div>
+                        <div class="bar" style="height: 85%;"></div>
+                        <div class="bar" style="height: 92%;"></div>
+                        <div class="bar" style="height: 95%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🎯 Top Performing Times</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Time Slot</th>
+                            <th>Impressions</th>
+                            <th>Clicks</th>
+                            <th>CTR</th>
+                            <th>Performance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>9:00 AM - 11:00 AM EST</td>
+                            <td>23,450</td>
+                            <td>985</td>
+                            <td>4.20%</td>
+                            <td><span class="badge high">High</span></td>
+                        </tr>
+                        <tr>
+                            <td>2:00 PM - 4:00 PM EST</td>
+                            <td>31,220</td>
+                            <td>872</td>
+                            <td>2.79%</td>
+                            <td><span class="badge medium">Medium</span></td>
+                        </tr>
+                        <tr>
+                            <td>Monday & Wednesday</td>
+                            <td>45,890</td>
+                            <td>1,423</td>
+                            <td>3.10%</td>
+                            <td><span class="badge high">High</span></td>
+                        </tr>
+                        <tr>
+                            <td>Weekend Traffic</td>
+                            <td>12,340</td>
+                            <td>247</td>
+                            <td>2.00%</td>
+                            <td><span class="badge low">Low</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section">
+                <h2>💻 Audience Breakdown</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Device Type</th>
+                            <th>Impressions</th>
+                            <th>Clicks</th>
+                            <th>Share</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Desktop</td>
+                            <td>86,666</td>
+                            <td>2,616</td>
+                            <td>68%</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile</td>
+                            <td>35,686</td>
+                            <td>1,077</td>
+                            <td>28%</td>
+                        </tr>
+                        <tr>
+                            <td>Tablet</td>
+                            <td>5,098</td>
+                            <td>154</td>
+                            <td>4%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <strong>Real-Time Analytics Dashboard</strong><br>
+            Data updates hourly • Questions? Contact tryaiburn@howstud.io
+        </div>
+    </div>
+    </div>
+</body>
+</html>
