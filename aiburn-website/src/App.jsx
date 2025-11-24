@@ -595,8 +595,8 @@ function Calculator() {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-          {/* Left Sidebar - Advertising (20%) - 17 Cards */}
-          <div className="lg:col-span-1" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          {/* Left Sidebar - Advertising (20%) - 17 Cards - Hidden on mobile, order 1 on desktop */}
+          <div className="lg:col-span-1 hidden lg:block order-1" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             {Array.from({ length: 17 }).map((_, i) => (
               <div key={`left-${i}`} className="bg-gradient-to-r from-slate-200 to-slate-300 rounded-2xl p-8 text-slate-900 shadow-md min-h-40 flex flex-col items-center justify-center text-center">
                 <h4 className="font-bold text-lg mb-2">Advertise Here</h4>
@@ -610,8 +610,8 @@ function Calculator() {
             ))}
           </div>
 
-          {/* Main Calculator - Center (60%) */}
-          <div className="lg:col-span-3">
+          {/* Main Calculator - Center (60%) - Appears first on mobile */}
+          <div className="lg:col-span-3 order-2 lg:order-2">
             {/* Quick Calculator Mode */}
              {mode === 'quick' && (
                <div className="space-y-8">
@@ -1178,8 +1178,8 @@ function Calculator() {
                   )}
           </div>
 
-          {/* Right Sidebar - Advertising (20%) - 17 Cards */}
-          <div className="lg:col-span-1" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          {/* Right Sidebar - Advertising (20%) - 17 Cards - Hidden on mobile, order 3 on desktop */}
+          <div className="lg:col-span-1 hidden lg:block order-3" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             {Array.from({ length: 17 }).map((_, i) => (
               <div key={`right-${i}`} className="bg-gradient-to-r from-slate-200 to-slate-300 rounded-2xl p-8 text-slate-900 shadow-md min-h-40 flex flex-col items-center justify-center text-center">
                 <h4 className="font-bold text-lg mb-2">Advertise Here</h4>
