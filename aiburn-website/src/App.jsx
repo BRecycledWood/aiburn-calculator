@@ -20,10 +20,12 @@ const MODELS = {
   'GPT-4': { input: 30, output: 60, provider: 'openai', category: 'Premium' },
   'GPT-4 Turbo': { input: 10, output: 30, provider: 'openai', category: 'Standard' },
   'GPT-4o': { input: 2.5, output: 10, provider: 'openai', category: 'Balanced' },
+  'GPT-4o mini': { input: 0.15, output: 0.6, provider: 'openai', category: 'Budget' },
   'GPT-3.5 Turbo': { input: 0.5, output: 1.5, provider: 'openai', category: 'Budget' },
   'Claude 3 Opus': { input: 15, output: 75, provider: 'anthropic', category: 'Premium' },
   'Claude 3.5 Sonnet': { input: 3, output: 15, provider: 'anthropic', category: 'Standard' },
   'Claude 3 Haiku': { input: 0.25, output: 1.25, provider: 'anthropic', category: 'Budget' },
+  'Gemini 2.0 Flash': { input: 0.075, output: 0.3, provider: 'google', category: 'Budget' },
   'Llama 3.1 70B': { input: 0.05, output: 0.08, provider: 'groq', category: 'Budget' },
   'DeepSeek Chat': { input: 0.14, output: 0.28, provider: 'deepseek', category: 'Budget' },
 }
@@ -183,6 +185,21 @@ function Calculator() {
       return false
     }
     return true
+  }
+
+  // Validate input/output token split
+  const validateTokenSplit = (input, output, total) => {
+    const sum = input + output
+    const tolerance = total * 0.05 // 5% tolerance
+    if (Math.abs(sum - total) > tolerance) {
+      const deviation = Math.abs(sum - total)
+      if (sum > total) {
+        return `⚠️ Warning: Input + Output (${sum.toFixed(1)}M) exceeds total (${total}M) by ${deviation.toFixed(1)}M`
+      } else if (sum < total) {
+        return `⚠️ Warning: Input + Output (${sum.toFixed(1)}M) is below total (${total}M) by ${deviation.toFixed(1)}M`
+      }
+    }
+    return null
   }
 
   // Calculate costs in Quick mode
@@ -369,7 +386,7 @@ function Calculator() {
       .replace(/[<>"'&]/g, '')
       .substring(0, 50)
 
-    const text = `I analyzed my AI token costs using @tryaiburn and discovered I could save $${savings.toFixed(2)} monthly by switching to ${modelName}. Current spending: $${currentCost.toFixed(2)}/month. Check the ROI on your AI stack → aiburn.howstud.io`
+    const text = `I analyzed my AI token costs using @tryaiburn and discovered I could save $${savings.toFixed(2)} monthly by switching to ${modelName}. Current spending: $${currentCost.toFixed(2)}/month. Find your savings → aiburn.howstud.io`
 
     const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`
     window.open(url, '_blank', 'width=550,height=420')
@@ -549,6 +566,27 @@ function Calculator() {
         </div>
       </header>
 
+      {/* Mode Explanation */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
+        <div className="bg-gradient-to-r from-slate-50 to-slate-100 border border-slate-200 rounded-2xl p-6">
+          {mode === 'quick' ? (
+            <div>
+              <h3 className="font-bold text-slate-900 mb-2">📊 Quick Calculator</h3>
+              <p className="text-sm text-slate-600">
+                Estimate costs based on your monthly token usage and current model. Perfect for quick comparisons and what-if scenarios. Results are calculated instantly in your browser.
+              </p>
+            </div>
+          ) : (
+            <div>
+              <h3 className="font-bold text-slate-900 mb-2">🔍 Exact Usage Analysis</h3>
+              <p className="text-sm text-slate-600">
+                Connect your OpenAI API key to analyze your actual usage patterns. See detailed breakdowns by model and discover real savings opportunities based on your spending history.
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+
       {/* Header Banner */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <AdCard slot={AD_SLOTS.find((s) => s.id === 'header-banner')} />
@@ -557,9 +595,9 @@ function Calculator() {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-          {/* Left Sidebar - Advertising (20%) - 12 Cards */}
+          {/* Left Sidebar - Advertising (20%) - 17 Cards */}
           <div className="lg:col-span-1" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            {Array.from({ length: 12 }).map((_, i) => (
+            {Array.from({ length: 17 }).map((_, i) => (
               <div key={`left-${i}`} className="bg-gradient-to-r from-slate-200 to-slate-300 rounded-2xl p-8 text-slate-900 shadow-md min-h-40 flex flex-col items-center justify-center text-center">
                 <h4 className="font-bold text-lg mb-2">Advertise Here</h4>
                 <p className="text-sm opacity-90 mb-6">
@@ -598,7 +636,7 @@ function Calculator() {
                  </div>
 
                  {/* Model Selection */}
-                <div className="bg-white rounded-3xl p-8 shadow-md">
+                 <div className="bg-white rounded-3xl p-8 shadow-md">
                   <h2 className="text-2xl font-bold text-slate-900 mb-6">
                     Step 1: Select Your Current Model
                   </h2>
@@ -617,7 +655,26 @@ function Calculator() {
                       </button>
                     ))}
                   </div>
-                </div>
+                  
+                  {/* Pricing Display */}
+                  {selectedModel && MODELS[selectedModel] && (
+                    <div className="mt-6 p-4 bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg border border-purple-200">
+                      <p className="text-xs text-slate-600 font-semibold mb-3 uppercase">Current Pricing Rates</p>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="bg-white rounded p-3">
+                          <p className="text-xs text-slate-500 mb-1">Input Tokens</p>
+                          <p className="text-2xl font-bold text-purple-600">${MODELS[selectedModel].input}</p>
+                          <p className="text-xs text-slate-500">/1M tokens</p>
+                        </div>
+                        <div className="bg-white rounded p-3">
+                          <p className="text-xs text-slate-500 mb-1">Output Tokens</p>
+                          <p className="text-2xl font-bold text-blue-600">${MODELS[selectedModel].output}</p>
+                          <p className="text-xs text-slate-500">/1M tokens</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                 </div>
 
                 {/* Token Slider */}
                 <div className="bg-white rounded-3xl p-8 shadow-md">
@@ -639,11 +696,29 @@ function Calculator() {
                       }}
                       className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-purple-600"
                     />
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-4xl font-bold text-purple-600">
-                        {monthlyTokens}
-                      </span>
-                      <span className="text-xl text-slate-600">Million tokens/month</span>
+                    <div className="flex items-baseline justify-between">
+                      <div className="flex items-baseline gap-2">
+                        <span className="text-4xl font-bold text-purple-600">
+                          {monthlyTokens}
+                        </span>
+                        <span className="text-xl text-slate-600">Million tokens/month</span>
+                      </div>
+                      {/* Manual Entry Field */}
+                      <input
+                        type="number"
+                        min="1"
+                        max="500"
+                        value={monthlyTokens}
+                        onChange={(e) => {
+                          const value = Number(e.target.value)
+                          if (validateTokenRange(value)) {
+                            setMonthlyTokens(value)
+                            setError('')
+                          }
+                        }}
+                        className="w-20 px-2 py-1 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 text-center font-semibold"
+                        title="Enter a number between 1 and 500"
+                      />
                     </div>
                     <p className="text-sm text-slate-500">
                       Range: 1M - 500M tokens (adjust to your monthly usage)
@@ -665,7 +740,18 @@ function Calculator() {
                      <div>
                        <div className="flex justify-between items-center mb-3">
                          <label className="font-semibold text-slate-900">Input Tokens (M)</label>
-                         <div className="text-lg font-bold text-blue-600">{inputTokens.toFixed(1)}</div>
+                         <input
+                           type="number"
+                           min="0"
+                           max={monthlyTokens}
+                           step="0.1"
+                           value={inputTokens.toFixed(1)}
+                           onChange={(e) => {
+                             const value = Math.min(Number(e.target.value), monthlyTokens)
+                             setInputTokens(value)
+                           }}
+                           className="w-24 px-2 py-1 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-lg font-bold text-blue-600 text-center"
+                         />
                        </div>
                        <input
                          type="range"
@@ -687,7 +773,18 @@ function Calculator() {
                      <div>
                        <div className="flex justify-between items-center mb-3">
                          <label className="font-semibold text-slate-900">Output Tokens (M)</label>
-                         <div className="text-lg font-bold text-green-600">{outputTokens.toFixed(1)}</div>
+                         <input
+                           type="number"
+                           min="0"
+                           max={monthlyTokens}
+                           step="0.1"
+                           value={outputTokens.toFixed(1)}
+                           onChange={(e) => {
+                             const value = Math.min(Number(e.target.value), monthlyTokens)
+                             setOutputTokens(value)
+                           }}
+                           className="w-24 px-2 py-1 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 text-lg font-bold text-green-600 text-center"
+                         />
                        </div>
                        <input
                          type="range"
@@ -710,7 +807,14 @@ function Calculator() {
                      <p className="text-xs text-slate-600 mb-2">
                        <strong>Total allocated:</strong> {(inputTokens + outputTokens).toFixed(1)}M / {monthlyTokens}M tokens
                      </p>
-                     <p className="text-xs text-slate-600">
+                     {validateTokenSplit(inputTokens, outputTokens, monthlyTokens) && (
+                       <div className="mt-3 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+                         <p className="text-xs text-yellow-900 font-semibold">
+                           {validateTokenSplit(inputTokens, outputTokens, monthlyTokens)}
+                         </p>
+                       </div>
+                     )}
+                     <p className="text-xs text-slate-600 mt-3">
                        <strong>Common patterns:</strong> Chatbot (6M/4M), Search (8M/2M), Code generation (7M/3M)
                      </p>
                    </div>
@@ -877,21 +981,21 @@ function Calculator() {
                       {/* Token & Cost Breakdown (Quick Mode Only) */}
                       {results.mode === 'quick' && (
                         <div className="text-center">
-                          <p className="text-xs text-purple-100 font-semibold mb-2 uppercase">Token Breakdown</p>
+                          <p className="text-xs text-purple-100 font-semibold mb-2 uppercase">Daily Costs</p>
                           <div className="bg-white bg-opacity-15 rounded-xl px-6 py-3 backdrop-blur-sm flex gap-6 justify-center">
                             <div>
-                              <p className="text-xs text-purple-200 mb-1">Input</p>
+                              <p className="text-xs text-purple-200 mb-1">Input Tokens</p>
                               <p className="text-lg font-bold text-white mb-2">
-                                {results.inputTokens.toFixed(1)}M
+                                {(results.inputTokens * results.inputCostPerUnit / 30).toFixed(2)}
                               </p>
-                              <p className="text-xs text-purple-200">${results.inputCostPerUnit}/1M</p>
+                              <p className="text-xs text-purple-200">{results.inputTokens.toFixed(1)}M @ ${results.inputCostPerUnit}/M</p>
                             </div>
                             <div>
-                              <p className="text-xs text-purple-200 mb-1">Output</p>
+                              <p className="text-xs text-purple-200 mb-1">Output Tokens</p>
                               <p className="text-lg font-bold text-white mb-2">
-                                {results.outputTokens.toFixed(1)}M
+                                {(results.outputTokens * results.outputCostPerUnit / 30).toFixed(2)}
                               </p>
-                              <p className="text-xs text-purple-200">${results.outputCostPerUnit}/1M</p>
+                              <p className="text-xs text-purple-200">{results.outputTokens.toFixed(1)}M @ ${results.outputCostPerUnit}/M</p>
                             </div>
                           </div>
                         </div>
@@ -1074,9 +1178,9 @@ function Calculator() {
                   )}
           </div>
 
-          {/* Right Sidebar - Advertising (20%) - 12 Cards */}
+          {/* Right Sidebar - Advertising (20%) - 17 Cards */}
           <div className="lg:col-span-1" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            {Array.from({ length: 12 }).map((_, i) => (
+            {Array.from({ length: 17 }).map((_, i) => (
               <div key={`right-${i}`} className="bg-gradient-to-r from-slate-200 to-slate-300 rounded-2xl p-8 text-slate-900 shadow-md min-h-40 flex flex-col items-center justify-center text-center">
                 <h4 className="font-bold text-lg mb-2">Advertise Here</h4>
                 <p className="text-sm opacity-90 mb-6">
