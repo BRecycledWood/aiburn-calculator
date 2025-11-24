@@ -340,7 +340,7 @@ export default function AdvertisePage() {
                 {loading ? 'Sending...' : 'Send Inquiry →'}
               </button>
               <p className="text-sm text-slate-600 mt-4">
-                Or email directly: <a href="mailto:contact@aiburn.howstud.io" className="text-purple-600 hover:text-purple-700 font-semibold">contact@aiburn.howstud.io</a>
+                Or email directly: <a href="mailto:tryaiburn@howstud.io" className="text-purple-600 hover:text-purple-700 font-semibold">tryaiburn@howstud.io</a>
               </p>
             </div>
           </form>
