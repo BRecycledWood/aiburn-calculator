@@ -218,7 +218,7 @@ function Calculator() {
     const alternatives = Object.entries(MODELS)
       .filter(([name]) => name !== selectedModel)
       .map(([name, pricing], idx) => {
-        const cost = (inputTokens * pricing.input + outputTokens * pricing.output) / 1000000
+        const cost = inputTokens * pricing.input + outputTokens * pricing.output
         const dailyAltCost = cost / 30
         const savings = currentCost - cost
         const savingsPercent = ((savings / currentCost) * 100).toFixed(1)
