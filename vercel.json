@@ -1,5 +1,11 @@
 {
   "buildCommand": "cd aiburn-website && npm run build",
   "outputDirectory": "aiburn-website/dist",
-  "installCommand": "cd aiburn-website && npm install --legacy-peer-deps"
+  "installCommand": "cd aiburn-website && npm install --legacy-peer-deps",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
