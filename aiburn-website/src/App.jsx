@@ -144,7 +144,7 @@ function AdCard({ slot, onRotate, isAvailableSlot = false }) {
 
 // Main Calculator Component
 function Calculator() {
-  const [mode, setMode] = useState('quick') // 'quick' or 'exact'
+  const [mode, setMode] = useState('exact') // 'quick' or 'exact'
   const [selectedModel, setSelectedModel] = useState('GPT-4o')
   const [monthlyTokens, setMonthlyTokens] = useState(10)
   const [inputTokens, setInputTokens] = useState(6) // actual M tokens for input
@@ -535,20 +535,6 @@ function Calculator() {
             <div className="flex gap-2 flex-shrink-0">
               <button
                 onClick={() => {
-                  setMode('quick')
-                  setResults(null)
-                  setError('')
-                }}
-                className={`px-3 sm:px-6 py-2 rounded-lg font-semibold transition text-sm sm:text-base ${
-                  mode === 'quick'
-                    ? 'bg-purple-600 text-white'
-                    : 'bg-slate-200 text-slate-900 hover:bg-slate-300'
-                }`}
-              >
-                Quick
-              </button>
-              <button
-                onClick={() => {
                   setMode('exact')
                   setResults(null)
                   setError('')
@@ -560,6 +546,20 @@ function Calculator() {
                 }`}
               >
                 Exact
+              </button>
+              <button
+                onClick={() => {
+                  setMode('quick')
+                  setResults(null)
+                  setError('')
+                }}
+                className={`px-3 sm:px-6 py-2 rounded-lg font-semibold transition text-sm sm:text-base ${
+                  mode === 'quick'
+                    ? 'bg-purple-600 text-white'
+                    : 'bg-slate-200 text-slate-900 hover:bg-slate-300'
+                }`}
+              >
+                Quick
               </button>
             </div>
           </div>
@@ -595,9 +595,9 @@ function Calculator() {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-          {/* Left Sidebar - Advertising (20%) - 17 Cards - Hidden on mobile, order 1 on desktop */}
+          {/* Left Sidebar - Advertising (20%) - 7 Cards - Hidden on mobile, order 1 on desktop */}
           <div className="lg:col-span-1 hidden lg:block order-1" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            {Array.from({ length: 17 }).map((_, i) => (
+            {Array.from({ length: 7 }).map((_, i) => (
               <div key={`left-${i}`} className="bg-gradient-to-r from-slate-200 to-slate-300 rounded-2xl p-8 text-slate-900 shadow-md min-h-40 flex flex-col items-center justify-center text-center">
                 <h4 className="font-bold text-lg mb-2">Advertise Here</h4>
                 <p className="text-sm opacity-90 mb-6">
@@ -1178,9 +1178,14 @@ function Calculator() {
                   )}
           </div>
 
-          {/* Right Sidebar - Advertising (20%) - 17 Cards - Hidden on mobile, order 3 on desktop */}
+          {/* Full-Width Featured Ad - Spans all 5 columns between center and right sidebar */}
+          <div className="lg:col-span-5 order-2.5">
+            <AdCard slot={featureAdSlot} />
+          </div>
+
+          {/* Right Sidebar - Advertising (20%) - 7 Cards - Hidden on mobile, order 3 on desktop */}
           <div className="lg:col-span-1 hidden lg:block order-3" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            {Array.from({ length: 17 }).map((_, i) => (
+            {Array.from({ length: 7 }).map((_, i) => (
               <div key={`right-${i}`} className="bg-gradient-to-r from-slate-200 to-slate-300 rounded-2xl p-8 text-slate-900 shadow-md min-h-40 flex flex-col items-center justify-center text-center">
                 <h4 className="font-bold text-lg mb-2">Advertise Here</h4>
                 <p className="text-sm opacity-90 mb-6">

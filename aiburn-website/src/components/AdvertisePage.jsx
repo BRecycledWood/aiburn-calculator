@@ -26,9 +26,18 @@ export default function AdvertisePage() {
     setShowError(false)
 
     try {
-      // TODO: Integrate with form submission service
-      // For now, just show success message
-      console.log('Form data:', formData)
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to send email')
+      }
+
       setFormData({
         name: '',
         email: '',
