@@ -26,7 +26,7 @@ export default function AdvertisePage() {
     setShowError(false)
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://formspree.io/f/xzzqgreo', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -44,12 +44,11 @@ export default function AdvertisePage() {
         company: '',
         message: '',
       })
-      setShowSuccess(true)
-
-      // Hide success message after 5 seconds
+      
+      // Redirect to thank you page after 1 second
       setTimeout(() => {
-        setShowSuccess(false)
-      }, 5000)
+        window.location.href = '/thank-you.html'
+      }, 1000)
     } catch (error) {
       console.error('Form submission error:', error)
       setShowError(true)
