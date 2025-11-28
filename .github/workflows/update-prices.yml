@@ -97,6 +97,7 @@ jobs:
               
               [View Logs](${context.payload.repository.html_url}/actions/runs/${context.runId})`
             })
+        continue-on-error: true
 
       - name: Notify on success (Discord - Optional)
         if: success() && steps.check-changes.outputs.changed == 'true'
