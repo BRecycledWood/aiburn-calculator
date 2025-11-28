@@ -2,12 +2,17 @@
 
 ---
 
-## 📋 LATEST UPDATE - Advertising Email Updated ✅
-**Date/Time:** November 25, 2025 - 14:45 UTC  
+## 📋 LATEST UPDATE - Fixed GitHub Actions Workflow & Email Update ✅
+**Date/Time:** November 28, 2025 - 10:45 UTC  
 **Project Status:** 🟢 READY FOR PRODUCTION DEPLOYMENT  
 **Overall Completion:** 90% (Phase 2 cleanup complete)  
-**What Changed:** Updated advertising contact email from tryaiburn@howstud.io to aiburnads@howstud.io
-**Files Modified:** src/components/AdvertisePage.jsx (2 locations: line 351, line 427)  
+**What Changed:** 
+1. Fixed GitHub Actions workflow - converted fetch-ai-prices.js to ES modules (was using CommonJS with ES module package.json)
+2. Updated advertising contact email from tryaiburn@howstud.io to aiburnads@howstud.io
+**Files Modified:** 
+- aiburn-website/scripts/fetch-ai-prices.js (ES module conversion)
+- aiburn-website/src/components/AdvertisePage.jsx (email update: lines 351, 427)
+- _STATUS.md (this document)
 **Build Status:** ✅ PASSING (270.98 KB bundle, 80.82 KB gzipped)
 
 ### Previous Update - Phase 2 Cleanup Complete ✅
