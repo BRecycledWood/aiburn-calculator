@@ -348,7 +348,7 @@ export default function AdvertisePage() {
                 {loading ? 'Sending...' : 'Send Inquiry →'}
               </button>
               <p className="text-sm text-slate-600 mt-4">
-                Or email directly: <a href="mailto:tryaiburn@howstud.io" className="text-purple-600 hover:text-purple-700 font-semibold">tryaiburn@howstud.io</a>
+                Or email directly: <a href="mailto:aiburnads@howstud.io" className="text-purple-600 hover:text-purple-700 font-semibold">aiburnads@howstud.io</a>
               </p>
             </div>
           </form>
@@ -424,7 +424,7 @@ export default function AdvertisePage() {
               <a href="/privacy" className="text-slate-600 hover:text-purple-600 transition">Privacy Policy</a>
               <a href="/terms" className="text-slate-600 hover:text-purple-600 transition">Terms of Service</a>
               <a href="/advertise" className="text-slate-600 hover:text-purple-600 transition">Advertise</a>
-              <a href="mailto:tryaiburn@howstud.io" className="text-slate-600 hover:text-purple-600 transition">Contact: tryaiburn@howstud.io</a>
+              <a href="mailto:aiburnads@howstud.io" className="text-slate-600 hover:text-purple-600 transition">Contact: aiburnads@howstud.io</a>
             </div>
             <div className="flex justify-center gap-4">
               <a href="https://instagram.com/tryaiburn" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-purple-600 transition font-semibold">Instagram</a>
