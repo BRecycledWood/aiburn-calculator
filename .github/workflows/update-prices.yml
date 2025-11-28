@@ -68,6 +68,7 @@ jobs:
           git add aiburn-website/public/data/prices.json aiburn-website/logs/price-updates.log
           git commit -m "chore: update AI model prices [automated]"
           git push
+        continue-on-error: true
 
       - name: Upload logs as artifact
         if: always()
