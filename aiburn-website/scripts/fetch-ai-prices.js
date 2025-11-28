@@ -9,9 +9,13 @@
  * Environment variables: OPENAI_FETCH_TIMEOUT (default: 10000ms)
  */
 
-const https = require('https');
-const fs = require('fs');
-const path = require('path');
+import https from 'https';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Configuration
 const CONFIG = {
@@ -343,11 +347,12 @@ async function main() {
 }
 
 // Run if executed directly
-if (require.main === module) {
-  main();
-}
+main().catch((error) => {
+  console.error('Fatal error:', error);
+  process.exit(1);
+});
 
-module.exports = {
+export {
   buildPriceData,
   savePriceData,
   loadCachedPrices,
