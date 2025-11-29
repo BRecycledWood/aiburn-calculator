@@ -67,7 +67,8 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add aiburn-website/public/data/prices.json aiburn-website/logs/price-updates.log
           git commit -m "chore: update AI model prices [automated]"
-          git push
+          git pull --rebase origin main || true
+          git push || true
         continue-on-error: true
 
       - name: Upload logs as artifact
@@ -78,26 +79,12 @@ jobs:
           path: aiburn-website/logs/price-updates.log
           retention-days: 30
 
-      - name: Create issue on failure
+      - name: Log failure
         if: failure()
-        uses: actions/github-script@v7
-        with:
-          script: |
-            github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: '⚠️ Automated price update failed',
-              body: `The automated price update job failed on ${new Date().toISOString()}.
-              
-              Please check the [workflow logs](${context.payload.repository.html_url}/actions/runs/${context.runId}) for details.
-              
-              ## Actions taken:
-              - Using cached prices as fallback
-              - Manual update may be required
-              
-              [View Logs](${context.payload.repository.html_url}/actions/runs/${context.runId})`
-            })
-        continue-on-error: true
+        run: |
+          echo "⚠️ Price update workflow failed"
+          echo "Check logs at: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          echo "Cached prices will be used as fallback"
 
       - name: Notify on success (Discord - Optional)
         if: success() && steps.check-changes.outputs.changed == 'true'
