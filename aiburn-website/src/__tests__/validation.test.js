@@ -5,6 +5,16 @@
 
 describe('Input Validation', () => {
   const validateTokenInput = (value) => {
+    // Check for null/undefined first
+    if (value === null || value === undefined) {
+      throw new Error('Invalid number format')
+    }
+
+    // Check for empty string
+    if (typeof value === 'string' && value.trim() === '') {
+      throw new Error('Invalid number format')
+    }
+
     // Coerce to number
     const num = Number(value)
 
@@ -286,7 +296,8 @@ describe('Error Handling', () => {
     it('should return calculated value on success', () => {
       const result = calculateWithErrorHandling(1000000, 1000000, 'GPT-4', models)
       expect(typeof result).toBe('number')
-      expect(result).toBeCloseTo(0.09, 2)
+      // GPT-4: input $30 + output $60 = $90 for 1M+1M tokens
+      expect(result).toBeCloseTo(90, 2)
     })
 
     it('should handle missing model pricing', () => {
@@ -331,11 +342,11 @@ describe('Data Sanitization', () => {
   const sanitizeUserInput = (input) => {
     if (typeof input !== 'string') return ''
 
-    // Remove HTML tags
-    let sanitized = input.replace(/<[^>]*>/g, '')
-
     // Remove script tags and content
-    sanitized = sanitized.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+    let sanitized = input.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+
+    // Remove HTML tags
+    sanitized = sanitized.replace(/<[^>]*>/g, '')
 
     // Remove null bytes
     sanitized = sanitized.replace(/\0/g, '')
