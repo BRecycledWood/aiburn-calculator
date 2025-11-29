@@ -90,7 +90,7 @@ jobs:
         if: success() && steps.check-changes.outputs.changed == 'true'
         uses: sarisia/actions-status-discord@v1
         with:
-          webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
           status: success
           description: |
             ✅ AI model prices updated successfully
