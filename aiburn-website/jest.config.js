@@ -18,8 +18,14 @@ export default {
 
   // Transform files
   transform: {
-    '^.+\\.(js|jsx)$': 'babel-jest',
+    '^src/.*\\.jsx?$': 'babel-jest',
   },
+  
+  // Don't transform scripts or node_modules
+  transformIgnorePatterns: [
+    '/node_modules/',
+    '/scripts/',
+  ],
 
   // Test match patterns
   testMatch: [

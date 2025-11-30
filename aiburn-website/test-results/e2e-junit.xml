@@ -1,0 +1,302 @@
+<testsuites id="" name="" tests="135" failures="0" skipped="0" errors="0" time="99.546772">
+<testsuite name="calculator.spec.js" timestamp="2025-11-30T01:15:36.554Z" hostname="chromium" tests="27" failures="0" skipped="0" time="91.351" errors="0">
+<testcase name="AIBurn Calculator E2E Tests › Page Loading › should load the calculator page" classname="calculator.spec.js" time="4.186">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Page Loading › should display page heading" classname="calculator.spec.js" time="4.227">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Page Loading › should have interactive buttons" classname="calculator.spec.js" time="4.055">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › UI Elements › should display mode toggle buttons" classname="calculator.spec.js" time="4.075">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › UI Elements › should have text content visible" classname="calculator.spec.js" time="4.082">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › UI Elements › should have links in footer" classname="calculator.spec.js" time="3.562">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Navigation › should have clickable elements" classname="calculator.spec.js" time="3.126">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Navigation › should not have broken links to local pages" classname="calculator.spec.js" time="3.177">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Responsive Design › should render on mobile viewport" classname="calculator.spec.js" time="3.69">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Responsive Design › should render on tablet viewport" classname="calculator.spec.js" time="3.696">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Responsive Design › should render on desktop viewport" classname="calculator.spec.js" time="3.657">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Content Structure › should have proper HTML structure" classname="calculator.spec.js" time="3.062">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Content Structure › should have semantic elements" classname="calculator.spec.js" time="3.318">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Content Structure › should have main content area" classname="calculator.spec.js" time="3.173">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Accessibility › should have proper lang attribute" classname="calculator.spec.js" time="3.112">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Accessibility › should have page title" classname="calculator.spec.js" time="2.691">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Accessibility › should have meta viewport tag" classname="calculator.spec.js" time="2.771">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Performance › should load within reasonable time" classname="calculator.spec.js" time="2.938">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Performance › should have reasonable DOM size" classname="calculator.spec.js" time="2.881">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Performance › should render visible content" classname="calculator.spec.js" time="2.909">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Error States › should handle page errors gracefully" classname="calculator.spec.js" time="4.771">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Error States › should not crash on page load" classname="calculator.spec.js" time="3.262">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › User Interaction Potential › should have clickable buttons" classname="calculator.spec.js" time="3.104">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › User Interaction Potential › should have form inputs available" classname="calculator.spec.js" time="3.022">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › SEO &amp; Meta Tags › should have meta description" classname="calculator.spec.js" time="3.058">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › SEO &amp; Meta Tags › should have proper favicon" classname="calculator.spec.js" time="2.913">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › SEO &amp; Meta Tags › should have Open Graph tags" classname="calculator.spec.js" time="2.833">
+<system-out>
+<![CDATA[Open Graph tags not yet implemented - this is optional
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="calculator.spec.js" timestamp="2025-11-30T01:15:36.554Z" hostname="firefox" tests="27" failures="0" skipped="0" time="97.055" errors="0">
+<testcase name="AIBurn Calculator E2E Tests › Page Loading › should load the calculator page" classname="calculator.spec.js" time="4.35">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Page Loading › should display page heading" classname="calculator.spec.js" time="3.987">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Page Loading › should have interactive buttons" classname="calculator.spec.js" time="4.511">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › UI Elements › should display mode toggle buttons" classname="calculator.spec.js" time="4.22">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › UI Elements › should have text content visible" classname="calculator.spec.js" time="4.082">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › UI Elements › should have links in footer" classname="calculator.spec.js" time="3.89">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Navigation › should have clickable elements" classname="calculator.spec.js" time="3.151">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Navigation › should not have broken links to local pages" classname="calculator.spec.js" time="3.09">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Responsive Design › should render on mobile viewport" classname="calculator.spec.js" time="3.413">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Responsive Design › should render on tablet viewport" classname="calculator.spec.js" time="3.678">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Responsive Design › should render on desktop viewport" classname="calculator.spec.js" time="4.136">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Content Structure › should have proper HTML structure" classname="calculator.spec.js" time="3.254">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Content Structure › should have semantic elements" classname="calculator.spec.js" time="3.356">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Content Structure › should have main content area" classname="calculator.spec.js" time="3.195">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Accessibility › should have proper lang attribute" classname="calculator.spec.js" time="3.74">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Accessibility › should have page title" classname="calculator.spec.js" time="3.801">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Accessibility › should have meta viewport tag" classname="calculator.spec.js" time="3.611">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Performance › should load within reasonable time" classname="calculator.spec.js" time="4.005">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Performance › should have reasonable DOM size" classname="calculator.spec.js" time="3.158">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Performance › should render visible content" classname="calculator.spec.js" time="3.176">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Error States › should handle page errors gracefully" classname="calculator.spec.js" time="5.169">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Error States › should not crash on page load" classname="calculator.spec.js" time="3.336">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › User Interaction Potential › should have clickable buttons" classname="calculator.spec.js" time="2.89">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › User Interaction Potential › should have form inputs available" classname="calculator.spec.js" time="2.969">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › SEO &amp; Meta Tags › should have meta description" classname="calculator.spec.js" time="2.881">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › SEO &amp; Meta Tags › should have proper favicon" classname="calculator.spec.js" time="3.019">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › SEO &amp; Meta Tags › should have Open Graph tags" classname="calculator.spec.js" time="2.987">
+<system-out>
+<![CDATA[Open Graph tags not yet implemented - this is optional
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="calculator.spec.js" timestamp="2025-11-30T01:15:36.554Z" hostname="webkit" tests="27" failures="0" skipped="0" time="98.335" errors="0">
+<testcase name="AIBurn Calculator E2E Tests › Page Loading › should load the calculator page" classname="calculator.spec.js" time="3.918">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Page Loading › should display page heading" classname="calculator.spec.js" time="3.939">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Page Loading › should have interactive buttons" classname="calculator.spec.js" time="3.636">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › UI Elements › should display mode toggle buttons" classname="calculator.spec.js" time="3.541">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › UI Elements › should have text content visible" classname="calculator.spec.js" time="3.592">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › UI Elements › should have links in footer" classname="calculator.spec.js" time="3.53">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Navigation › should have clickable elements" classname="calculator.spec.js" time="3.058">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Navigation › should not have broken links to local pages" classname="calculator.spec.js" time="3.112">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Responsive Design › should render on mobile viewport" classname="calculator.spec.js" time="3.667">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Responsive Design › should render on tablet viewport" classname="calculator.spec.js" time="3.673">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Responsive Design › should render on desktop viewport" classname="calculator.spec.js" time="3.787">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Content Structure › should have proper HTML structure" classname="calculator.spec.js" time="3.074">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Content Structure › should have semantic elements" classname="calculator.spec.js" time="4.204">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Content Structure › should have main content area" classname="calculator.spec.js" time="3.678">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Accessibility › should have proper lang attribute" classname="calculator.spec.js" time="3.904">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Accessibility › should have page title" classname="calculator.spec.js" time="3.499">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Accessibility › should have meta viewport tag" classname="calculator.spec.js" time="3.331">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Performance › should load within reasonable time" classname="calculator.spec.js" time="3.297">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Performance › should have reasonable DOM size" classname="calculator.spec.js" time="3.432">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Performance › should render visible content" classname="calculator.spec.js" time="3.792">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Error States › should handle page errors gracefully" classname="calculator.spec.js" time="5.564">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Error States › should not crash on page load" classname="calculator.spec.js" time="4.177">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › User Interaction Potential › should have clickable buttons" classname="calculator.spec.js" time="4.019">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › User Interaction Potential › should have form inputs available" classname="calculator.spec.js" time="3.688">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › SEO &amp; Meta Tags › should have meta description" classname="calculator.spec.js" time="3.238">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › SEO &amp; Meta Tags › should have proper favicon" classname="calculator.spec.js" time="2.956">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › SEO &amp; Meta Tags › should have Open Graph tags" classname="calculator.spec.js" time="3.029">
+<system-out>
+<![CDATA[Open Graph tags not yet implemented - this is optional
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="calculator.spec.js" timestamp="2025-11-30T01:15:36.554Z" hostname="Mobile Chrome" tests="27" failures="0" skipped="0" time="87.169" errors="0">
+<testcase name="AIBurn Calculator E2E Tests › Page Loading › should load the calculator page" classname="calculator.spec.js" time="3.011">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Page Loading › should display page heading" classname="calculator.spec.js" time="3.023">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Page Loading › should have interactive buttons" classname="calculator.spec.js" time="2.877">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › UI Elements › should display mode toggle buttons" classname="calculator.spec.js" time="3.017">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › UI Elements › should have text content visible" classname="calculator.spec.js" time="2.941">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › UI Elements › should have links in footer" classname="calculator.spec.js" time="3.396">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Navigation › should have clickable elements" classname="calculator.spec.js" time="3.09">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Navigation › should not have broken links to local pages" classname="calculator.spec.js" time="3.041">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Responsive Design › should render on mobile viewport" classname="calculator.spec.js" time="3.492">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Responsive Design › should render on tablet viewport" classname="calculator.spec.js" time="3.72">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Responsive Design › should render on desktop viewport" classname="calculator.spec.js" time="4.289">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Content Structure › should have proper HTML structure" classname="calculator.spec.js" time="3.03">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Content Structure › should have semantic elements" classname="calculator.spec.js" time="2.945">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Content Structure › should have main content area" classname="calculator.spec.js" time="3.016">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Accessibility › should have proper lang attribute" classname="calculator.spec.js" time="2.925">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Accessibility › should have page title" classname="calculator.spec.js" time="3.061">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Accessibility › should have meta viewport tag" classname="calculator.spec.js" time="2.944">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Performance › should load within reasonable time" classname="calculator.spec.js" time="2.963">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Performance › should have reasonable DOM size" classname="calculator.spec.js" time="2.955">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Performance › should render visible content" classname="calculator.spec.js" time="3">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Error States › should handle page errors gracefully" classname="calculator.spec.js" time="5.272">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Error States › should not crash on page load" classname="calculator.spec.js" time="3.318">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › User Interaction Potential › should have clickable buttons" classname="calculator.spec.js" time="3.155">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › User Interaction Potential › should have form inputs available" classname="calculator.spec.js" time="3.049">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › SEO &amp; Meta Tags › should have meta description" classname="calculator.spec.js" time="3.246">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › SEO &amp; Meta Tags › should have proper favicon" classname="calculator.spec.js" time="3.316">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › SEO &amp; Meta Tags › should have Open Graph tags" classname="calculator.spec.js" time="3.077">
+<system-out>
+<![CDATA[Open Graph tags not yet implemented - this is optional
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="calculator.spec.js" timestamp="2025-11-30T01:15:36.554Z" hostname="Mobile Safari" tests="27" failures="0" skipped="0" time="87.657" errors="0">
+<testcase name="AIBurn Calculator E2E Tests › Page Loading › should load the calculator page" classname="calculator.spec.js" time="3.557">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Page Loading › should display page heading" classname="calculator.spec.js" time="3.321">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Page Loading › should have interactive buttons" classname="calculator.spec.js" time="3.335">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › UI Elements › should display mode toggle buttons" classname="calculator.spec.js" time="3.294">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › UI Elements › should have text content visible" classname="calculator.spec.js" time="3.204">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › UI Elements › should have links in footer" classname="calculator.spec.js" time="3.74">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Navigation › should have clickable elements" classname="calculator.spec.js" time="3.199">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Navigation › should not have broken links to local pages" classname="calculator.spec.js" time="3.335">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Responsive Design › should render on mobile viewport" classname="calculator.spec.js" time="3.455">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Responsive Design › should render on tablet viewport" classname="calculator.spec.js" time="3.694">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Responsive Design › should render on desktop viewport" classname="calculator.spec.js" time="4.078">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Content Structure › should have proper HTML structure" classname="calculator.spec.js" time="3.024">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Content Structure › should have semantic elements" classname="calculator.spec.js" time="2.958">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Content Structure › should have main content area" classname="calculator.spec.js" time="2.797">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Accessibility › should have proper lang attribute" classname="calculator.spec.js" time="2.844">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Accessibility › should have page title" classname="calculator.spec.js" time="3.014">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Accessibility › should have meta viewport tag" classname="calculator.spec.js" time="3.046">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Performance › should load within reasonable time" classname="calculator.spec.js" time="3.039">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Performance › should have reasonable DOM size" classname="calculator.spec.js" time="2.825">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Performance › should render visible content" classname="calculator.spec.js" time="2.823">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Error States › should handle page errors gracefully" classname="calculator.spec.js" time="5.19">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › Error States › should not crash on page load" classname="calculator.spec.js" time="3.081">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › User Interaction Potential › should have clickable buttons" classname="calculator.spec.js" time="3.055">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › User Interaction Potential › should have form inputs available" classname="calculator.spec.js" time="3.066">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › SEO &amp; Meta Tags › should have meta description" classname="calculator.spec.js" time="2.863">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › SEO &amp; Meta Tags › should have proper favicon" classname="calculator.spec.js" time="2.954">
+</testcase>
+<testcase name="AIBurn Calculator E2E Tests › SEO &amp; Meta Tags › should have Open Graph tags" classname="calculator.spec.js" time="2.866">
+<system-out>
+<![CDATA[Open Graph tags not yet implemented - this is optional
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

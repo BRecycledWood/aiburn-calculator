@@ -68,7 +68,12 @@ const PRICE_SOURCES = {
 class Logger {
   constructor(logFile) {
     this.logFile = logFile;
-    this.ensureLogDir();
+    try {
+      this.ensureLogDir();
+    } catch (e) {
+      // Silently fail if we can't create log directory (e.g., during testing)
+      console.warn('Failed to create log directory:', e.message);
+    }
   }
 
   ensureLogDir() {
@@ -347,10 +352,12 @@ async function main() {
 }
 
 // Run if executed directly
-main().catch((error) => {
-  console.error('Fatal error:', error);
-  process.exit(1);
-});
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main().catch((error) => {
+    console.error('Fatal error:', error);
+    process.exit(1);
+  });
+}
 
 export {
   buildPriceData,

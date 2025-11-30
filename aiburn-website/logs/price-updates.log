@@ -734,3 +734,1095 @@
 [2025-11-29T05:34:24.501Z] SUCCESS: Price data validation passed {"models":9}
 [2025-11-29T05:34:24.501Z] SUCCESS: Price data saved {"file":"/home/runner/work/aiburn-calculator/aiburn-calculator/aiburn-website/public/data/prices.json"}
 [2025-11-29T05:34:24.501Z] SUCCESS: Price update completed successfully {"duration":"6ms","models":9,"timestamp":"2025-11-29T05:34:24.499Z"}
+[2025-11-29T07:20:38.131Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:38.133Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:38.134Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:38.134Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:38.134Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:38.135Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:38.135Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:38.135Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:38.136Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:38.136Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:38.136Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:38.137Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:38.137Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:38.141Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:38.141Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:38.141Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:38.142Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:38.142Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:38.142Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:38.143Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:38.143Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:38.143Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:38.143Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:38.144Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:38.144Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:38.144Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:38.145Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:38.145Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:38.145Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:38.145Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:38.146Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:38.146Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:38.146Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:38.147Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:38.147Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:38.147Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:38.147Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:38.148Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:38.149Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:38.150Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:38.150Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:38.151Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:38.151Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:38.151Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:38.151Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:38.152Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:38.152Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:38.152Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:38.152Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:38.153Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:38.153Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:38.153Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:38.157Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:38.157Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:38.157Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:38.157Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:38.158Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:38.158Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:38.158Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:38.159Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:38.159Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:38.159Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:38.159Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:38.160Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:38.160Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:38.165Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:38.165Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:38.165Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:38.166Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:38.166Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:38.166Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:38.166Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:38.167Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:38.167Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:38.167Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:38.168Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:38.168Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:38.168Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:38.169Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:38.169Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:38.169Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:38.169Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:38.170Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:38.170Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:38.170Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:38.170Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:38.171Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:38.171Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:38.171Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:38.171Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:38.172Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:38.173Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:38.173Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:38.173Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:38.174Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:38.174Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:38.174Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:38.174Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:38.174Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:38.176Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:38.176Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:38.176Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:38.176Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:38.177Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:38.177Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:38.177Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:38.178Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:38.178Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:38.178Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:38.178Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:38.178Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:38.179Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:38.179Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:38.179Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:38.179Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:38.180Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:38.180Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:38.180Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:38.181Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:38.181Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:38.181Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:38.181Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:38.181Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:38.182Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:38.182Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:38.182Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:38.182Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:38.183Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:38.183Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:38.183Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:38.183Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:38.183Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:38.184Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:38.184Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:38.184Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:38.184Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:38.185Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:38.185Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:38.185Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:38.185Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:38.185Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:38.186Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:38.186Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:38.188Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:38.188Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:38.189Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:38.189Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:38.189Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:38.189Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:38.190Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:38.190Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:38.190Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:38.190Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:38.190Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:38.191Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:38.191Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:38.191Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:38.191Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:38.192Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:38.192Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:38.192Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:38.192Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:38.193Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:38.193Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:38.193Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:38.193Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:38.193Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:38.194Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:38.194Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:38.194Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:38.194Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:38.194Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:38.194Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:38.194Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:38.195Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:38.195Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:38.195Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:38.195Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:38.195Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:38.195Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:38.195Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:38.195Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:40.684Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:40.693Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:40.693Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:40.694Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:40.694Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:40.694Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:40.695Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:40.695Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:40.695Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:40.697Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:40.698Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:40.698Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:40.698Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:40.705Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:40.705Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:40.705Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:40.706Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:40.706Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:40.706Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:40.707Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:40.707Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:40.707Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:40.707Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:40.708Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:40.708Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:40.708Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:40.709Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:40.709Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:40.710Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:40.710Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:40.710Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:40.710Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:40.711Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:40.711Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:40.711Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:40.712Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:40.712Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:40.712Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:40.712Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:40.713Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:40.713Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:40.714Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:40.714Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:40.714Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:40.714Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:40.716Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:40.717Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:40.717Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:40.717Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:40.718Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:40.718Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:40.718Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:40.723Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:40.723Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:40.724Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:40.724Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:40.724Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:40.724Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:40.725Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:40.725Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:40.725Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:40.725Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:40.726Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:40.726Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:40.726Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:40.730Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:40.730Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:40.731Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:40.731Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:40.731Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:40.731Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:40.732Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:40.732Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:40.732Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:40.732Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:40.733Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:40.733Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:40.733Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:40.734Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:40.734Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:40.734Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:40.734Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:40.735Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:40.735Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:40.735Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:40.735Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:40.736Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:40.736Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:40.736Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:40.736Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:40.737Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:40.738Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:40.738Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:40.739Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:40.739Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:40.739Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:40.739Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:40.740Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:40.740Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:40.740Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:40.740Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:40.741Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:40.741Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:40.741Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:40.742Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:40.742Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:40.742Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:40.742Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:40.743Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:40.744Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:40.744Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:40.744Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:40.745Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:40.745Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:40.745Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:40.745Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:40.745Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:40.746Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:40.746Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:40.747Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:40.747Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:40.747Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:40.747Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:40.748Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:40.748Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:40.748Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:40.748Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:40.748Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:40.749Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:40.749Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:40.749Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:40.749Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:40.750Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:40.750Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:40.750Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:40.750Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:40.751Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:40.751Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:40.751Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:40.751Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:40.751Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:40.752Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:40.752Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:40.753Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:40.754Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:40.754Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:40.755Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:40.755Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:40.755Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:40.755Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:40.756Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:40.756Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:40.756Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:40.756Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:40.756Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:40.757Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:40.757Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:40.757Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:40.757Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:40.758Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:40.758Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:40.758Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:40.758Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:40.758Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:40.759Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:40.759Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:40.759Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:40.759Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:40.759Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:40.760Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:40.760Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:40.760Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:40.760Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:40.760Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:40.760Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:40.760Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:40.760Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:40.760Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:40.760Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:40.761Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:40.761Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:40.761Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:43.888Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:43.896Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:43.897Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:43.897Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:43.898Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:43.898Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:43.898Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:43.898Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:43.899Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:43.899Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:43.900Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:43.900Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:43.901Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:43.907Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:43.908Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:43.908Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:43.909Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:43.909Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:43.909Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:43.909Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:43.910Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:43.910Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:43.910Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:43.911Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:43.911Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:43.911Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:43.912Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:43.912Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:43.912Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:43.913Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:43.913Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:43.913Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:43.913Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:43.914Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:43.914Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:43.914Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:43.914Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:43.915Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:43.915Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:43.915Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:43.916Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:43.916Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:43.916Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:43.917Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:43.917Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:43.917Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:43.917Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:43.918Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:43.920Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:43.920Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:43.920Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:43.921Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:43.925Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:43.925Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:43.926Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:43.926Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:43.926Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:43.927Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:43.927Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:43.927Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:43.927Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:43.928Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:43.928Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:43.928Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:43.928Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:43.931Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:43.933Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:43.933Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:43.933Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:43.934Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:43.934Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:43.934Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:43.934Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:43.935Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:43.935Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:43.935Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:43.935Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:43.936Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:43.936Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:43.936Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:43.937Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:43.937Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:43.937Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:43.937Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:43.938Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:43.938Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:43.938Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:43.939Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:43.939Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:43.939Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:43.939Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:43.941Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:43.941Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:43.941Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:43.941Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:43.942Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:43.942Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:43.942Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:43.942Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:43.943Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:43.943Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:43.943Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:43.943Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:43.943Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:43.944Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:43.944Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:43.944Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:43.945Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:43.945Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:43.945Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:43.945Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:43.946Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:43.947Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:43.947Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:43.947Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:43.947Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:43.947Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:43.948Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:43.948Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:43.948Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:43.949Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:43.949Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:43.949Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:43.949Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:43.950Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:43.950Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:43.950Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:43.950Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:43.951Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:43.951Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:43.951Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:43.951Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:43.952Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:43.952Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:43.952Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:43.952Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:43.953Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:43.953Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:43.953Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:43.953Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:43.953Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:43.954Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:43.954Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:43.955Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:43.956Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:43.956Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:43.956Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:43.956Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:43.956Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:43.957Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:43.957Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:43.958Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:43.958Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:43.958Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:43.958Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:43.959Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:43.959Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:43.959Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:43.959Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:43.959Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:43.960Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:43.960Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:43.960Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:43.960Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:43.960Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:43.961Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:43.961Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:43.961Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:43.961Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:43.962Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:43.962Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:43.962Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:43.962Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:43.962Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:43.962Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:43.962Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:43.962Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:43.962Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:43.962Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:43.963Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:43.963Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:43.963Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:55.483Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:55.490Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:55.491Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:55.491Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:55.492Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:55.492Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:55.492Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:55.492Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:55.493Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:55.493Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:55.494Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:55.494Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:55.494Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:55.500Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:55.500Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:55.501Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:55.501Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:55.501Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:55.501Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:55.502Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:55.502Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:55.502Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:55.503Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:55.503Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:55.503Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:55.503Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:55.504Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:55.504Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:55.505Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:55.505Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:55.505Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:55.505Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:55.506Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:55.506Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:55.506Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:55.506Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:55.507Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:55.507Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:55.507Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:55.508Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:55.508Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:55.508Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:55.509Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:55.509Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:55.509Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:55.509Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:55.510Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:55.512Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:55.512Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:55.512Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:55.513Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:55.513Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:55.518Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:55.518Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:55.518Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:55.519Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:55.519Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:55.519Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:55.519Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:55.520Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:55.520Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:55.520Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:55.520Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:55.521Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:55.521Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:55.526Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:55.526Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:55.527Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:55.527Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:55.527Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:55.528Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:55.528Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:55.528Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:55.528Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:55.529Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:55.529Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:55.529Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:55.529Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:55.530Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:55.530Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:55.531Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:55.531Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:55.531Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:55.531Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:55.532Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:55.532Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:55.532Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:55.532Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:55.533Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:55.533Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:55.533Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:55.535Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:55.535Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:55.535Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:55.535Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:55.536Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:55.536Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:55.536Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:55.536Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:55.537Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:55.537Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:55.537Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:55.537Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:55.538Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:55.539Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:55.540Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:55.540Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:55.540Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:55.541Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:55.541Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:55.541Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:55.541Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:55.542Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:55.542Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:55.542Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:55.542Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:55.543Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:55.543Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:55.544Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:55.544Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:55.544Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:55.544Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:55.545Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:55.545Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:55.545Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:55.545Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:55.545Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:55.546Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:55.546Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:55.546Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:55.547Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:55.547Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:55.547Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:55.547Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:55.548Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:55.548Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:55.548Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:55.548Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:55.549Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:55.549Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:55.549Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:55.549Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:55.550Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:55.552Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:55.552Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:55.553Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:55.553Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:55.553Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:55.553Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:55.554Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:55.554Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:55.554Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:55.554Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:55.555Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:55.555Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:55.555Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:55.556Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:55.556Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:55.556Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:55.556Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:55.556Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:55.557Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:55.557Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:55.557Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:55.557Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:55.558Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:55.558Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:55.558Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:55.558Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:55.558Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:55.559Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:55.559Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:55.559Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:55.559Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:55.559Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:55.559Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:55.559Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:55.559Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:55.560Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:55.560Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:55.560Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:55.560Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:58.238Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:58.247Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:58.248Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:58.248Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:58.249Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:58.249Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:58.250Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:58.250Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:58.250Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:58.251Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:58.251Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:58.253Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:58.253Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:58.259Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:58.260Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:58.260Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:58.260Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:58.260Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:58.261Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:58.261Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:58.261Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:58.261Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:58.262Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:58.262Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:58.262Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:58.262Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:58.263Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:58.263Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:58.264Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:58.264Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:58.264Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:58.264Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:58.265Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:58.265Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:58.265Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:58.266Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:58.266Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:58.266Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:58.266Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:58.267Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:58.267Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:58.268Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:58.268Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:58.268Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:58.268Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:58.269Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:58.269Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:58.271Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:58.271Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:58.272Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:58.272Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:58.272Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:58.277Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:58.277Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:58.277Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:58.278Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:58.278Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:58.278Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:58.279Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:58.279Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:58.279Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:58.279Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:58.280Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:58.280Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:58.280Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:58.284Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:58.284Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:58.284Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:58.285Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:58.285Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:58.285Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:58.285Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:58.286Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:58.286Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:58.286Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:58.286Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:58.287Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:58.287Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:58.287Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:58.288Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:58.288Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:58.288Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:58.289Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:58.289Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:58.289Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:58.289Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:58.289Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:58.290Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:58.290Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:58.290Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:58.291Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:58.292Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:58.292Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:58.293Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:58.294Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:58.294Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:58.294Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:58.295Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:58.295Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:58.295Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:58.295Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:58.296Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:58.296Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:58.296Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:58.297Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:58.297Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:58.297Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:58.297Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:58.298Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:58.298Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:58.298Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:58.299Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:58.299Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:58.300Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:58.300Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:58.300Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:58.300Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:58.301Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:58.301Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:58.301Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:58.302Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:58.302Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:58.302Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:58.302Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:58.303Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:58.303Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:58.303Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:58.303Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:58.303Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:58.304Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:58.304Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:58.304Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:58.305Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:58.305Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:58.305Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:58.305Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:58.305Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:58.306Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:58.306Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:58.306Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:58.306Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:58.307Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:58.307Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:58.308Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:58.309Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:58.309Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:58.309Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:58.309Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:58.310Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:58.311Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:58.311Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:58.311Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:58.311Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:58.312Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:58.312Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:58.312Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:58.312Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:58.313Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:58.313Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:58.313Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:58.313Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:58.313Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:58.314Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:58.314Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:58.314Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:58.314Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:58.314Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:58.315Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:58.315Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:20:58.315Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:20:58.315Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:20:58.315Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:20:58.315Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:20:58.315Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:20:58.316Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:20:58.316Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:20:58.316Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:20:58.316Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:20:58.316Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:20:58.316Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:20:58.316Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:20:58.316Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:21:01.715Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:21:01.723Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:21:01.724Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:21:01.724Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:21:01.725Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:21:01.725Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:21:01.725Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:21:01.725Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:21:01.726Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:21:01.726Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:21:01.727Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:21:01.728Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:21:01.729Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:21:01.735Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:21:01.735Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:21:01.735Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:21:01.736Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:21:01.736Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:21:01.736Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:21:01.736Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:21:01.737Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:21:01.737Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:21:01.737Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:21:01.737Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:21:01.738Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:21:01.738Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:21:01.739Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:21:01.739Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:21:01.739Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:21:01.740Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:21:01.740Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:21:01.740Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:21:01.740Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:21:01.741Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:21:01.741Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:21:01.741Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:21:01.741Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:21:01.742Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:21:01.742Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:21:01.743Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:21:01.743Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:21:01.743Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:21:01.744Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:21:01.744Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:21:01.744Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:21:01.745Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:21:01.747Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:21:01.747Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:21:01.747Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:21:01.747Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:21:01.748Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:21:01.748Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:21:01.753Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:21:01.753Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:21:01.753Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:21:01.753Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:21:01.754Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:21:01.754Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:21:01.754Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:21:01.754Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:21:01.755Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:21:01.755Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:21:01.755Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:21:01.755Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:21:01.756Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:21:01.760Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:21:01.760Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:21:01.761Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:21:01.761Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:21:01.761Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:21:01.761Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:21:01.762Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:21:01.762Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:21:01.762Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:21:01.762Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:21:01.763Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:21:01.763Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:21:01.763Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:21:01.764Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:21:01.764Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:21:01.764Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:21:01.764Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:21:01.765Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:21:01.765Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:21:01.765Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:21:01.765Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:21:01.766Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:21:01.766Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:21:01.766Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:21:01.766Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:21:01.767Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:21:01.768Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:21:01.768Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:21:01.769Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:21:01.769Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:21:01.769Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:21:01.769Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:21:01.770Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:21:01.770Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:21:01.770Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:21:01.770Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:21:01.770Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:21:01.771Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:21:01.771Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:21:01.771Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:21:01.772Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:21:01.772Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:21:01.772Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:21:01.772Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:21:01.773Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:21:01.774Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:21:01.774Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:21:01.774Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:21:01.775Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:21:01.775Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:21:01.775Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:21:01.775Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:21:01.776Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:21:01.776Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:21:01.777Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:21:01.777Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:21:01.777Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:21:01.777Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:21:01.777Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:21:01.778Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:21:01.778Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:21:01.778Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:21:01.778Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:21:01.779Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:21:01.779Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:21:01.779Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:21:01.779Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:21:01.780Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:21:01.780Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:21:01.780Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:21:01.780Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:21:01.781Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:21:01.781Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:21:01.781Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:21:01.781Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:21:01.781Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:21:01.782Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:21:01.782Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:21:01.783Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:21:01.784Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:21:01.784Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:21:01.784Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:21:01.785Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:21:01.785Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:21:01.785Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:21:01.786Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:21:01.786Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:21:01.786Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:21:01.786Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:21:01.786Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:21:01.787Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:21:01.787Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:21:01.787Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:21:01.787Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:21:01.788Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:21:01.788Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:21:01.788Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:21:01.788Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:21:01.788Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:21:01.789Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:21:01.789Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:21:01.789Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:21:01.789Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:21:01.790Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2025-11-29T07:21:01.790Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2025-11-29T07:21:01.790Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2025-11-29T07:21:01.790Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2025-11-29T07:21:01.790Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2025-11-29T07:21:01.790Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2025-11-29T07:21:01.790Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2025-11-29T07:21:01.790Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2025-11-29T07:21:01.790Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2025-11-29T07:21:01.791Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2025-11-29T07:21:01.791Z] INFO: Processing Groq prices {"provider":"groq"}
+[2025-11-29T07:21:01.791Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2025-11-29T07:21:01.791Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2025-11-29T07:21:01.791Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
