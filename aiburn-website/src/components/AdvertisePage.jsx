@@ -36,7 +36,9 @@ export default function AdvertisePage() {
       })
 
       if (!response.ok) {
-        throw new Error('Failed to send email')
+        const errorData = await response.text()
+        console.error(`API error ${response.status}:`, errorData)
+        throw new Error(`Failed to send email: ${response.status}`)
       }
 
       setFormData({
