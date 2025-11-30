@@ -26,7 +26,8 @@ export default function AdvertisePage() {
     setShowError(false)
 
     try {
-      const response = await fetch('https://formspree.io/f/xzzqgreo', {
+      // Send email via Nodemailer API
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -45,10 +46,11 @@ export default function AdvertisePage() {
         message: '',
       })
       
-      // Redirect to thank you page after 1 second
+      // Show success message for 3 seconds then reset
+      setShowSuccess(true)
       setTimeout(() => {
-        window.location.href = '/thank-you.html'
-      }, 1000)
+        setShowSuccess(false)
+      }, 3000)
     } catch (error) {
       console.error('Form submission error:', error)
       setShowError(true)
