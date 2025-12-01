@@ -1,0 +1,139 @@
+name: QC Checks
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  security:
+    name: Security & Linting
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+      
+      - name: Run npm audit
+        run: npm audit --audit-level=moderate
+        continue-on-error: true
+      
+      - name: Run ESLint
+        run: npm run lint
+        continue-on-error: true
+
+  tests:
+    name: Unit & Integration Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+      
+      - name: Run tests with coverage
+        run: npm test -- --coverage --watchAll=false
+      
+      - name: Upload coverage reports
+        uses: codecov/codecov-action@v3
+        with:
+          files: ./coverage/lcov.info
+          flags: unittests
+          name: codecov-umbrella
+        continue-on-error: true
+
+  build:
+    name: Build Verification
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+      
+      - name: Build production bundle
+        run: npm run build
+      
+      - name: Check bundle size
+        run: |
+          SIZE=$(du -sh dist | cut -f1)
+          echo "Bundle size: $SIZE"
+          # Fail if bundle exceeds 150KB gzipped
+          GZIP_SIZE=$(gzip -9 < dist/index.*.js | wc -c | awk '{print $1/1024}')
+          if (( $(echo "$GZIP_SIZE > 150" | bc -l) )); then
+            echo "❌ Bundle too large: ${GZIP_SIZE}KB (limit: 150KB)"
+            exit 1
+          fi
+          echo "✅ Bundle size OK: ${GZIP_SIZE}KB"
+
+  security-audit:
+    name: Security Audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+      
+      - name: Check for hardcoded secrets
+        run: |
+          # Check for common secret patterns
+          if grep -r "sk-\|pk_\|AKIA" src/ api/ --include="*.js" --include="*.jsx"; then
+            echo "❌ Potential hardcoded secrets detected!"
+            exit 1
+          fi
+          echo "✅ No hardcoded secrets found"
+      
+      - name: Check for dangerous patterns
+        run: |
+          # Check for dangerouslySetInnerHTML
+          if grep -r "dangerouslySetInnerHTML" src/ --include="*.jsx"; then
+            echo "❌ dangerouslySetInnerHTML found!"
+            exit 1
+          fi
+          # Check for innerHTML
+          if grep -r "\.innerHTML" src/ --include="*.jsx"; then
+            echo "❌ .innerHTML found!"
+            exit 1
+          fi
+          echo "✅ No XSS danger patterns found"
+
+  test-summary:
+    name: Test Summary
+    runs-on: ubuntu-latest
+    if: always()
+    needs: [security, tests, build, security-audit]
+    steps:
+      - name: Check job status
+        run: |
+          if [[ "${{ needs.security.result }}" == "failure" || "${{ needs.tests.result }}" == "failure" || "${{ needs.build.result }}" == "failure" || "${{ needs.security-audit.result }}" == "failure" ]]; then
+            echo "❌ QC checks failed!"
+            exit 1
+          fi
+          echo "✅ All QC checks passed!"
