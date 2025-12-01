@@ -1280,10 +1280,9 @@ function Calculator() {
           </div>
 
                 {/* Footer */}
-      <footer className="bg-white border-t border-slate-200 mt-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <AdCard slot={AD_SLOTS.find((s) => s.id === 'footer-banner')} />
-          <div className="mt-8 flex flex-col items-center gap-4">
+                <footer className="bg-white border-t border-slate-200 mt-12">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div className="mt-8 flex flex-col items-center gap-4">
             <img 
               src="/images/logo-icon.png" 
               alt="AIBurn" 
