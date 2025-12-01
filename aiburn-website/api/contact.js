@@ -5,7 +5,7 @@
  * Endpoint: POST /api/contact
  */
 
-const nodemailer = require('nodemailer');
+import nodemailer from 'nodemailer';
 
 // CORS helper
 const setCORSHeaders = (res) => {
@@ -14,7 +14,7 @@ const setCORSHeaders = (res) => {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 };
 
-module.exports = async (req, res) => {
+export default async (req, res) => {
   // Set CORS headers first
   setCORSHeaders(res);
 
