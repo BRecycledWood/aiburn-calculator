@@ -14,6 +14,8 @@ import {
 import AdvertisePage from './components/AdvertisePage'
 import PrivacyPage from './components/PrivacyPage'
 import TermsPage from './components/TermsPage'
+import ErrorBoundary from './components/ErrorBoundary'
+import { sanitizeTokenCount, sanitizeFormData } from './utils/sanitizer'
 
 // Model pricing data (per 1M tokens)
 const MODELS = {
@@ -176,6 +178,13 @@ function Calculator() {
 
     return () => clearInterval(timer)
   }, [mode])
+
+  // Clear API key on unmount for security
+  useEffect(() => {
+    return () => {
+      setApiKey('')
+    }
+  }, [])
 
   // Validate token range
   const validateTokenRange = (tokens) => {
@@ -475,8 +484,11 @@ function Calculator() {
     const handleEmailCapture = async (e) => {
     e.preventDefault()
     
+    // Sanitize form data
+    const sanitized = sanitizeFormData(emailCapture)
+    
     // Validate required fields
-    if (!emailCapture.name.trim() || !emailCapture.email.trim()) {
+    if (!sanitized.name.trim() || !sanitized.email.trim()) {
      setError('Name and email are required')
      return
     }
@@ -486,11 +498,11 @@ function Calculator() {
     try {
      // Submit to FormSubmit which will email to tryaiburn@howstud.io
      const formData = new FormData()
-     formData.append('name', emailCapture.name)
-     formData.append('email', emailCapture.email)
-     formData.append('phone', emailCapture.phone)
-     formData.append('company', emailCapture.company)
-     formData.append('jobTitle', emailCapture.jobTitle)
+     formData.append('name', sanitized.name)
+     formData.append('email', sanitized.email)
+     formData.append('phone', sanitized.phone)
+     formData.append('company', sanitized.company)
+     formData.append('jobTitle', sanitized.jobTitle)
      formData.append('_subject', 'AIBurn Cost Analysis Report')
      formData.append('_captcha', 'false')
 
@@ -747,7 +759,8 @@ function Calculator() {
                            step="0.1"
                            value={inputTokens.toFixed(1)}
                            onChange={(e) => {
-                             const value = Math.min(Number(e.target.value), monthlyTokens)
+                             const sanitized = sanitizeTokenCount(e.target.value)
+                             const value = Math.min(sanitized, monthlyTokens)
                              setInputTokens(value)
                            }}
                            className="w-24 px-2 py-1 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-lg font-bold text-blue-600 text-center"
@@ -780,7 +793,8 @@ function Calculator() {
                            step="0.1"
                            value={outputTokens.toFixed(1)}
                            onChange={(e) => {
-                             const value = Math.min(Number(e.target.value), monthlyTokens)
+                             const sanitized = sanitizeTokenCount(e.target.value)
+                             const value = Math.min(sanitized, monthlyTokens)
                              setOutputTokens(value)
                            }}
                            className="w-24 px-2 py-1 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 text-lg font-bold text-green-600 text-center"
@@ -1279,13 +1293,15 @@ function Calculator() {
 // Router App Component
 export default function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Calculator />} />
-        <Route path="/advertise" element={<AdvertisePage />} />
-        <Route path="/privacy" element={<PrivacyPage />} />
-        <Route path="/terms" element={<TermsPage />} />
-      </Routes>
-    </Router>
+    <ErrorBoundary>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Calculator />} />
+          <Route path="/advertise" element={<AdvertisePage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/terms" element={<TermsPage />} />
+        </Routes>
+      </Router>
+    </ErrorBoundary>
   )
 }
