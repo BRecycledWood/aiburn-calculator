@@ -46,8 +46,18 @@ module.exports = async (req, res) => {
     // Check environment variables
     if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
       console.error('Missing SMTP configuration');
+      console.error('SMTP_HOST:', process.env.SMTP_HOST ? 'set' : 'MISSING');
+      console.error('SMTP_USER:', process.env.SMTP_USER ? 'set' : 'MISSING');
+      console.error('SMTP_PASS:', process.env.SMTP_PASS ? 'set' : 'MISSING');
       throw new Error('Email service not configured');
     }
+
+    console.log('SMTP Config:', {
+      host: process.env.SMTP_HOST,
+      port: process.env.SMTP_PORT || '465',
+      secure: process.env.SMTP_SECURE,
+      user: process.env.SMTP_USER ? 'set' : 'MISSING'
+    });
 
     // Create transporter
     const transporter = nodemailer.createTransport({
@@ -61,6 +71,7 @@ module.exports = async (req, res) => {
     });
 
     // Test connection
+    console.log('Testing SMTP connection...');
     await transporter.verify();
     console.log('✓ SMTP connection verified');
 
