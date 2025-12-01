@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="AIBurn Calculator Tests" tests="202" failures="0" errors="0" time="0.486">
-  <testsuite name="Price Fetching System (ESM - skipped in Jest)" errors="0" failures="0" skipped="24" timestamp="2025-12-01T12:23:21" time="0.077" tests="24">
+<testsuites name="AIBurn Calculator Tests" tests="202" failures="0" errors="0" time="0.465">
+  <testsuite name="Price Fetching System (ESM - skipped in Jest)" errors="0" failures="0" skipped="24" timestamp="2025-12-01T12:28:16" time="0.074" tests="24">
     <testcase classname="Price Fetching System (ESM - skipped in Jest) › buildPriceData" name="should build price data with all required models" time="0">
       <skipped/>
     </testcase>
@@ -74,16 +74,16 @@
       <skipped/>
     </testcase>
   </testsuite>
-  <testsuite name="UI Component Tests" errors="0" failures="0" skipped="0" timestamp="2025-12-01T12:23:21" time="0.033" tests="55">
-    <testcase classname="UI Component Tests › Ad Card Component" name="should render available ad slot" time="0">
+  <testsuite name="UI Component Tests" errors="0" failures="0" skipped="0" timestamp="2025-12-01T12:28:16" time="0.032" tests="55">
+    <testcase classname="UI Component Tests › Ad Card Component" name="should render available ad slot" time="0.001">
     </testcase>
-    <testcase classname="UI Component Tests › Ad Card Component" name="should show unavailable for sponsored slots" time="0.001">
+    <testcase classname="UI Component Tests › Ad Card Component" name="should show unavailable for sponsored slots" time="0">
     </testcase>
     <testcase classname="UI Component Tests › Ad Card Component" name="should render ad price correctly" time="0">
     </testcase>
-    <testcase classname="UI Component Tests › Ad Card Component" name="should handle missing sponsor data" time="0">
+    <testcase classname="UI Component Tests › Ad Card Component" name="should handle missing sponsor data" time="0.001">
     </testcase>
-    <testcase classname="UI Component Tests › Results Display" name="should format currency correctly" time="0.009">
+    <testcase classname="UI Component Tests › Results Display" name="should format currency correctly" time="0.008">
     </testcase>
     <testcase classname="UI Component Tests › Results Display" name="should format small amounts" time="0">
     </testcase>
@@ -95,7 +95,7 @@
     </testcase>
     <testcase classname="UI Component Tests › Alternative Models Display" name="should categorize alternatives" time="0">
     </testcase>
-    <testcase classname="UI Component Tests › Alternative Models Display" name="should handle missing category" time="0.001">
+    <testcase classname="UI Component Tests › Alternative Models Display" name="should handle missing category" time="0">
     </testcase>
     <testcase classname="UI Component Tests › Alternative Models Display" name="should preserve all items" time="0">
     </testcase>
@@ -117,7 +117,7 @@
     </testcase>
     <testcase classname="UI Component Tests › Loading State" name="should show quick calc loading" time="0">
     </testcase>
-    <testcase classname="UI Component Tests › Loading State" name="should show exact mode loading" time="0.001">
+    <testcase classname="UI Component Tests › Loading State" name="should show exact mode loading" time="0">
     </testcase>
     <testcase classname="UI Component Tests › Loading State" name="should show default loading" time="0">
     </testcase>
@@ -125,7 +125,7 @@
     </testcase>
     <testcase classname="UI Component Tests › Tab Navigation" name="should change tabs" time="0">
     </testcase>
-    <testcase classname="UI Component Tests › Tab Navigation" name="should not change to invalid tab" time="0">
+    <testcase classname="UI Component Tests › Tab Navigation" name="should not change to invalid tab" time="0.001">
     </testcase>
     <testcase classname="UI Component Tests › Tab Navigation" name="should keep same tab when unchanged" time="0">
     </testcase>
@@ -139,7 +139,7 @@
     </testcase>
     <testcase classname="Responsive Design › Layout Breakpoints" name="should handle boundary values" time="0">
     </testcase>
-    <testcase classname="Responsive Design › Grid Layout" name="should use single column on mobile" time="0.001">
+    <testcase classname="Responsive Design › Grid Layout" name="should use single column on mobile" time="0">
     </testcase>
     <testcase classname="Responsive Design › Grid Layout" name="should use 2 columns on tablet" time="0">
     </testcase>
@@ -149,7 +149,7 @@
     </testcase>
     <testcase classname="Responsive Design › Ad Visibility" name="should hide sidebar ads on mobile" time="0">
     </testcase>
-    <testcase classname="Responsive Design › Ad Visibility" name="should hide featured ads on mobile" time="0">
+    <testcase classname="Responsive Design › Ad Visibility" name="should hide featured ads on mobile" time="0.001">
     </testcase>
     <testcase classname="Responsive Design › Ad Visibility" name="should show footer ads on all devices" time="0">
     </testcase>
@@ -161,7 +161,7 @@
     </testcase>
     <testcase classname="Responsive Design › Spacing Adjustments" name="should use smaller padding on mobile" time="0">
     </testcase>
-    <testcase classname="Responsive Design › Spacing Adjustments" name="should increase padding on tablet" time="0.001">
+    <testcase classname="Responsive Design › Spacing Adjustments" name="should increase padding on tablet" time="0">
     </testcase>
     <testcase classname="Responsive Design › Spacing Adjustments" name="should use largest padding on desktop" time="0">
     </testcase>
@@ -179,21 +179,21 @@
     </testcase>
     <testcase classname="Ad Placement &amp; Visibility › Ad Slot Configuration" name="should reject invalid placement" time="0">
     </testcase>
-    <testcase classname="Ad Placement &amp; Visibility › Ad Rotation" name="should rotate to next ad" time="0.001">
+    <testcase classname="Ad Placement &amp; Visibility › Ad Rotation" name="should rotate to next ad" time="0">
     </testcase>
     <testcase classname="Ad Placement &amp; Visibility › Ad Rotation" name="should loop back to start" time="0">
     </testcase>
     <testcase classname="Ad Placement &amp; Visibility › Ad Rotation" name="should handle single ad" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="Input Validation" errors="0" failures="0" skipped="0" timestamp="2025-12-01T12:23:21" time="0.029" tests="44">
+  <testsuite name="Input Validation" errors="0" failures="0" skipped="0" timestamp="2025-12-01T12:28:16" time="0.028" tests="44">
     <testcase classname="Input Validation › Token Input Validation" name="should accept valid token counts" time="0.001">
     </testcase>
     <testcase classname="Input Validation › Token Input Validation" name="should reject negative tokens" time="0">
     </testcase>
-    <testcase classname="Input Validation › Token Input Validation" name="should reject non-numeric input" time="0">
+    <testcase classname="Input Validation › Token Input Validation" name="should reject non-numeric input" time="0.001">
     </testcase>
-    <testcase classname="Input Validation › Token Input Validation" name="should reject special characters" time="0.001">
+    <testcase classname="Input Validation › Token Input Validation" name="should reject special characters" time="0">
     </testcase>
     <testcase classname="Input Validation › Token Input Validation" name="should handle very large numbers" time="0">
     </testcase>
@@ -205,9 +205,9 @@
     </testcase>
     <testcase classname="Input Validation › Token Input Validation" name="should handle empty string" time="0">
     </testcase>
-    <testcase classname="Input Validation › Token Input Validation" name="should handle null/undefined" time="0">
+    <testcase classname="Input Validation › Token Input Validation" name="should handle null/undefined" time="0.001">
     </testcase>
-    <testcase classname="Input Validation › Token Input Validation" name="should handle float tokens" time="0.007">
+    <testcase classname="Input Validation › Token Input Validation" name="should handle float tokens" time="0.006">
     </testcase>
     <testcase classname="Input Validation › Token Input Validation" name="should handle infinity" time="0">
     </testcase>
@@ -227,13 +227,13 @@
     </testcase>
     <testcase classname="Input Validation › Model Selection Validation" name="should accept valid model" time="0">
     </testcase>
-    <testcase classname="Input Validation › Model Selection Validation" name="should reject invalid model" time="0.001">
+    <testcase classname="Input Validation › Model Selection Validation" name="should reject invalid model" time="0">
     </testcase>
     <testcase classname="Input Validation › Model Selection Validation" name="should reject empty model" time="0">
     </testcase>
-    <testcase classname="Input Validation › Model Selection Validation" name="should reject null/undefined" time="0.001">
+    <testcase classname="Input Validation › Model Selection Validation" name="should reject null/undefined" time="0">
     </testcase>
-    <testcase classname="Input Validation › Model Selection Validation" name="should be case-sensitive" time="0.001">
+    <testcase classname="Input Validation › Model Selection Validation" name="should be case-sensitive" time="0">
     </testcase>
     <testcase classname="Input Validation › Slider Input Validation" name="should accept values in range" time="0">
     </testcase>
@@ -247,9 +247,9 @@
     </testcase>
     <testcase classname="Input Validation › Slider Input Validation" name="should handle custom ranges" time="0">
     </testcase>
-    <testcase classname="Error Handling › Calculation Error Handling" name="should return error object on invalid input" time="0.001">
+    <testcase classname="Error Handling › Calculation Error Handling" name="should return error object on invalid input" time="0">
     </testcase>
-    <testcase classname="Error Handling › Calculation Error Handling" name="should return error object on invalid model" time="0">
+    <testcase classname="Error Handling › Calculation Error Handling" name="should return error object on invalid model" time="0.001">
     </testcase>
     <testcase classname="Error Handling › Calculation Error Handling" name="should return calculated value on success" time="0">
     </testcase>
@@ -263,7 +263,7 @@
     </testcase>
     <testcase classname="Error Handling › Error Message Formatting" name="should preserve special characters in messages" time="0">
     </testcase>
-    <testcase classname="Data Sanitization" name="should remove HTML tags" time="0.001">
+    <testcase classname="Data Sanitization" name="should remove HTML tags" time="0">
     </testcase>
     <testcase classname="Data Sanitization" name="should remove script tags" time="0">
     </testcase>
@@ -271,17 +271,17 @@
     </testcase>
     <testcase classname="Data Sanitization" name="should trim whitespace" time="0">
     </testcase>
-    <testcase classname="Data Sanitization" name="should handle non-string input" time="0">
+    <testcase classname="Data Sanitization" name="should handle non-string input" time="0.001">
     </testcase>
     <testcase classname="Data Sanitization" name="should preserve legitimate content" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="Price Loading Integration" errors="0" failures="0" skipped="0" timestamp="2025-12-01T12:23:21" time="0.021" tests="26">
-    <testcase classname="Price Loading Integration › Load Prices from JSON" name="should load prices successfully" time="0">
+  <testsuite name="Price Loading Integration" errors="0" failures="0" skipped="0" timestamp="2025-12-01T12:28:16" time="0.02" tests="26">
+    <testcase classname="Price Loading Integration › Load Prices from JSON" name="should load prices successfully" time="0.001">
     </testcase>
     <testcase classname="Price Loading Integration › Load Prices from JSON" name="should handle network errors gracefully" time="0">
     </testcase>
-    <testcase classname="Price Loading Integration › Load Prices from JSON" name="should handle malformed JSON" time="0.001">
+    <testcase classname="Price Loading Integration › Load Prices from JSON" name="should handle malformed JSON" time="0">
     </testcase>
     <testcase classname="Price Loading Integration › Load Prices from JSON" name="should validate price data structure" time="0">
     </testcase>
@@ -289,9 +289,9 @@
     </testcase>
     <testcase classname="Price Loading Integration › Fallback Mechanism" name="should use fallback data on fetch failure" time="0.001">
     </testcase>
-    <testcase classname="Price Loading Integration › Fallback Mechanism" name="should use fallback data on bad response" time="0">
+    <testcase classname="Price Loading Integration › Fallback Mechanism" name="should use fallback data on bad response" time="0.001">
     </testcase>
-    <testcase classname="Price Loading Integration › Fallback Mechanism" name="should prefer fresh data over fallback" time="0.001">
+    <testcase classname="Price Loading Integration › Fallback Mechanism" name="should prefer fresh data over fallback" time="0">
     </testcase>
     <testcase classname="Price Loading Integration › Price Data Validation" name="should validate correct price data" time="0">
     </testcase>
@@ -307,7 +307,7 @@
     </testcase>
     <testcase classname="Price Loading Integration › Price Staleness Detection" name="should detect fresh prices" time="0">
     </testcase>
-    <testcase classname="Price Loading Integration › Price Staleness Detection" name="should detect stale prices (7+ days old)" time="0">
+    <testcase classname="Price Loading Integration › Price Staleness Detection" name="should detect stale prices (7+ days old)" time="0.001">
     </testcase>
     <testcase classname="Price Loading Integration › Price Staleness Detection" name="should detect stale prices at boundary" time="0">
     </testcase>
@@ -330,51 +330,7 @@
     <testcase classname="Price Loading Integration › Model Alternatives Generation" name="should calculate negative savings for expensive alternatives" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="E2E Workflows" errors="0" failures="0" skipped="0" timestamp="2025-12-01T12:23:21" time="0.017" tests="21">
-    <testcase classname="E2E Workflows › Quick Calculator Workflow" name="should complete quick calc workflow" time="0.001">
-    </testcase>
-    <testcase classname="E2E Workflows › Quick Calculator Workflow" name="should handle model change" time="0">
-    </testcase>
-    <testcase classname="E2E Workflows › Quick Calculator Workflow" name="should handle slider adjustment" time="0">
-    </testcase>
-    <testcase classname="E2E Workflows › Quick Calculator Workflow" name="should error on invalid model" time="0">
-    </testcase>
-    <testcase classname="E2E Workflows › Quick Calculator Workflow" name="should error on invalid tokens" time="0">
-    </testcase>
-    <testcase classname="E2E Workflows › Quick Calculator Workflow" name="should calculate alternatives correctly" time="0">
-    </testcase>
-    <testcase classname="E2E Workflows › Exact Usage Workflow" name="should complete exact usage workflow" time="0">
-    </testcase>
-    <testcase classname="E2E Workflows › Exact Usage Workflow" name="should error on empty API key" time="0">
-    </testcase>
-    <testcase classname="E2E Workflows › Exact Usage Workflow" name="should parse usage data correctly" time="0.001">
-    </testcase>
-    <testcase classname="E2E Workflows › Share Results Workflow" name="should generate tweet with correct data" time="0">
-    </testcase>
-    <testcase classname="E2E Workflows › Share Results Workflow" name="should handle URL encoding" time="0">
-    </testcase>
-    <testcase classname="E2E Workflows › Share Results Workflow" name="should error on missing results" time="0">
-    </testcase>
-    <testcase classname="E2E Workflows › Share Results Workflow" name="should error on empty alternatives" time="0">
-    </testcase>
-    <testcase classname="E2E Workflows › Share Results Workflow" name="should keep tweet under 280 characters" time="0">
-    </testcase>
-    <testcase classname="E2E Workflows › Download Report Workflow" name="should generate report from results" time="0">
-    </testcase>
-    <testcase classname="E2E Workflows › Download Report Workflow" name="should include timestamp" time="0">
-    </testcase>
-    <testcase classname="E2E Workflows › Download Report Workflow" name="should error on missing results" time="0">
-    </testcase>
-    <testcase classname="E2E Workflows › Download Report Workflow" name="should handle missing alternatives" time="0.001">
-    </testcase>
-    <testcase classname="E2E Workflows › Complete User Journey" name="should complete full user journey" time="0">
-    </testcase>
-    <testcase classname="E2E Workflows › Complete User Journey" name="should track state changes" time="0">
-    </testcase>
-    <testcase classname="E2E Workflows › Complete User Journey" name="should handle multiple calculations" time="0">
-    </testcase>
-  </testsuite>
-  <testsuite name="Cost Calculations" errors="0" failures="0" skipped="0" timestamp="2025-12-01T12:23:21" time="0.018" tests="32">
+  <testsuite name="Cost Calculations" errors="0" failures="0" skipped="0" timestamp="2025-12-01T12:28:16" time="0.017" tests="32">
     <testcase classname="Cost Calculations › calculateCost" name="should calculate cost for valid inputs" time="0">
     </testcase>
     <testcase classname="Cost Calculations › calculateCost" name="should handle zero input tokens" time="0">
@@ -393,11 +349,11 @@
     </testcase>
     <testcase classname="Cost Calculations › calculateCost" name="should handle negative numbers gracefully" time="0">
     </testcase>
-    <testcase classname="Cost Calculations › calculateMonthlyUsage" name="should calculate monthly usage from daily usage" time="0.001">
+    <testcase classname="Cost Calculations › calculateMonthlyUsage" name="should calculate monthly usage from daily usage" time="0">
     </testcase>
     <testcase classname="Cost Calculations › calculateMonthlyUsage" name="should handle 31-day months" time="0">
     </testcase>
-    <testcase classname="Cost Calculations › calculateMonthlyUsage" name="should handle zero daily usage" time="0">
+    <testcase classname="Cost Calculations › calculateMonthlyUsage" name="should handle zero daily usage" time="0.001">
     </testcase>
     <testcase classname="Cost Calculations › calculateMonthlyUsage" name="should handle fractional daily usage" time="0">
     </testcase>
@@ -415,17 +371,17 @@
     </testcase>
     <testcase classname="Cost Calculations › calculateSavings" name="should handle zero savings" time="0">
     </testcase>
-    <testcase classname="Cost Calculations › calculateSavings" name="should handle very small differences" time="0.001">
+    <testcase classname="Cost Calculations › calculateSavings" name="should handle very small differences" time="0">
     </testcase>
     <testcase classname="Cost Calculations › calculateSavings" name="should handle very large costs" time="0">
     </testcase>
-    <testcase classname="Cost Calculations › calculateSavings" name="should throw error on zero current cost" time="0">
+    <testcase classname="Cost Calculations › calculateSavings" name="should throw error on zero current cost" time="0.001">
     </testcase>
     <testcase classname="Cost Calculations › tokenToMillion conversion" name="should convert tokens to millions" time="0">
     </testcase>
     <testcase classname="Cost Calculations › tokenToMillion conversion" name="should round to 2 decimals" time="0">
     </testcase>
-    <testcase classname="Cost Calculations › tokenToMillion conversion" name="should handle zero tokens" time="0.001">
+    <testcase classname="Cost Calculations › tokenToMillion conversion" name="should handle zero tokens" time="0">
     </testcase>
     <testcase classname="Cost Calculations › tokenToMillion conversion" name="should handle small token counts" time="0">
     </testcase>
@@ -437,7 +393,51 @@
     </testcase>
     <testcase classname="Cost Calculations › pricePercentageCalculation" name="should handle part &gt; total" time="0">
     </testcase>
-    <testcase classname="Cost Calculations › pricePercentageCalculation" name="should round correctly" time="0">
+    <testcase classname="Cost Calculations › pricePercentageCalculation" name="should round correctly" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="E2E Workflows" errors="0" failures="0" skipped="0" timestamp="2025-12-01T12:28:16" time="0.018" tests="21">
+    <testcase classname="E2E Workflows › Quick Calculator Workflow" name="should complete quick calc workflow" time="0">
+    </testcase>
+    <testcase classname="E2E Workflows › Quick Calculator Workflow" name="should handle model change" time="0">
+    </testcase>
+    <testcase classname="E2E Workflows › Quick Calculator Workflow" name="should handle slider adjustment" time="0">
+    </testcase>
+    <testcase classname="E2E Workflows › Quick Calculator Workflow" name="should error on invalid model" time="0.001">
+    </testcase>
+    <testcase classname="E2E Workflows › Quick Calculator Workflow" name="should error on invalid tokens" time="0">
+    </testcase>
+    <testcase classname="E2E Workflows › Quick Calculator Workflow" name="should calculate alternatives correctly" time="0">
+    </testcase>
+    <testcase classname="E2E Workflows › Exact Usage Workflow" name="should complete exact usage workflow" time="0">
+    </testcase>
+    <testcase classname="E2E Workflows › Exact Usage Workflow" name="should error on empty API key" time="0.001">
+    </testcase>
+    <testcase classname="E2E Workflows › Exact Usage Workflow" name="should parse usage data correctly" time="0">
+    </testcase>
+    <testcase classname="E2E Workflows › Share Results Workflow" name="should generate tweet with correct data" time="0.001">
+    </testcase>
+    <testcase classname="E2E Workflows › Share Results Workflow" name="should handle URL encoding" time="0">
+    </testcase>
+    <testcase classname="E2E Workflows › Share Results Workflow" name="should error on missing results" time="0">
+    </testcase>
+    <testcase classname="E2E Workflows › Share Results Workflow" name="should error on empty alternatives" time="0">
+    </testcase>
+    <testcase classname="E2E Workflows › Share Results Workflow" name="should keep tweet under 280 characters" time="0">
+    </testcase>
+    <testcase classname="E2E Workflows › Download Report Workflow" name="should generate report from results" time="0">
+    </testcase>
+    <testcase classname="E2E Workflows › Download Report Workflow" name="should include timestamp" time="0">
+    </testcase>
+    <testcase classname="E2E Workflows › Download Report Workflow" name="should error on missing results" time="0">
+    </testcase>
+    <testcase classname="E2E Workflows › Download Report Workflow" name="should handle missing alternatives" time="0">
+    </testcase>
+    <testcase classname="E2E Workflows › Complete User Journey" name="should complete full user journey" time="0.001">
+    </testcase>
+    <testcase classname="E2E Workflows › Complete User Journey" name="should track state changes" time="0">
+    </testcase>
+    <testcase classname="E2E Workflows › Complete User Journey" name="should handle multiple calculations" time="0">
     </testcase>
   </testsuite>
 </testsuites>
