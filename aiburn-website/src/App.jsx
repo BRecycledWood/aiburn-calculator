@@ -17,8 +17,8 @@ import TermsPage from './components/TermsPage'
 import ErrorBoundary from './components/ErrorBoundary'
 import { sanitizeTokenCount, sanitizeFormData } from './utils/sanitizer'
 
-// Model pricing data (per 1M tokens)
-const MODELS = {
+// Default fallback pricing (in case JSON fetch fails)
+const DEFAULT_MODELS = {
   'GPT-4': { input: 30, output: 60, provider: 'openai', category: 'Premium' },
   'GPT-4 Turbo': { input: 10, output: 30, provider: 'openai', category: 'Standard' },
   'GPT-4o': { input: 2.5, output: 10, provider: 'openai', category: 'Balanced' },
@@ -30,6 +30,44 @@ const MODELS = {
   'Gemini 2.0 Flash': { input: 0.075, output: 0.3, provider: 'google', category: 'Budget' },
   'Llama 3.1 70B': { input: 0.05, output: 0.08, provider: 'groq', category: 'Budget' },
   'DeepSeek Chat': { input: 0.14, output: 0.28, provider: 'deepseek', category: 'Budget' },
+}
+
+// Model pricing data loaded from JSON (per 1M tokens)
+let MODELS = { ...DEFAULT_MODELS }
+
+// Load pricing data from JSON file
+const loadPricingData = async () => {
+  try {
+    const response = await fetch('/pricing.json')
+    if (response.ok) {
+      const data = await response.json()
+      if (data.models && typeof data.models === 'object') {
+        MODELS = data.models
+        console.log('✓ Pricing data loaded from JSON')
+      }
+    }
+  } catch (error) {
+    console.warn('Failed to load pricing data, using defaults:', error.message)
+    // Continue with default MODELS
+  }
+}
+
+// Load pricing on app start
+loadPricingData()
+
+// Format date consistently with timezone awareness
+const formatUpdateDate = (date) => {
+  if (!date || !(date instanceof Date)) return ''
+  
+  // Use UTC to ensure consistent timezone representation
+  const formatter = new Intl.DateTimeFormat('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: new Date().getFullYear() !== date.getFullYear() ? 'numeric' : undefined,
+    timeZone: 'UTC'
+  })
+  
+  return formatter.format(date)
 }
 
 // Ad slots configuration
@@ -405,7 +443,7 @@ function Calculator() {
 
     const text = `I analyzed my AI token costs using @tryaiburn and discovered I could save $${savings.toFixed(2)} monthly by switching to ${modelName}. Current spending: $${currentCost.toFixed(2)}/month. Find your savings → aiburn.howstud.io`
 
-    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`
+    const url = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}`
     window.open(url, '_blank', 'width=550,height=420')
   }
 
@@ -559,7 +597,11 @@ function Calculator() {
                  src="/images/logo-full.png" 
                  alt="AIBurn - AI Cost Calculator" 
                  className="h-12 sm:h-16 object-contain"
+                 onError={(e) => {
+                   e.target.style.display = 'none'
+                 }}
                />
+               <span className="font-bold text-lg sm:text-xl text-slate-900">AIBurn</span>
              </div>
             <div className="flex gap-2 flex-shrink-0">
               <button
@@ -723,7 +765,9 @@ function Calculator() {
                           setError('')
                         }
                       }}
-                      className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-purple-600"
+                      aria-label="Monthly token usage slider"
+                      aria-valuetext={`${monthlyTokens} million tokens per month`}
+                      className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
                     />
                     <div className="flex items-baseline justify-between">
                       <div className="flex items-baseline gap-2">
@@ -792,7 +836,9 @@ function Calculator() {
                          onChange={(e) => {
                            setInputTokens(Number(e.target.value))
                          }}
-                         className="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                         aria-label="Input token split slider"
+                         aria-valuetext={`${inputTokens.toFixed(1)} million input tokens`}
+                         className="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer accent-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                        />
                        <p className="text-xs text-slate-500 mt-2">
                          {inputTokens.toFixed(1)}M input tokens/month
@@ -826,7 +872,9 @@ function Calculator() {
                          onChange={(e) => {
                            setOutputTokens(Number(e.target.value))
                          }}
-                         className="w-full h-2 bg-green-200 rounded-lg appearance-none cursor-pointer accent-green-600"
+                         aria-label="Output token split slider"
+                         aria-valuetext={`${outputTokens.toFixed(1)} million output tokens`}
+                         className="w-full h-2 bg-green-200 rounded-lg appearance-none cursor-pointer accent-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                        />
                        <p className="text-xs text-slate-500 mt-2">
                          {outputTokens.toFixed(1)}M output tokens/month
@@ -1066,7 +1114,7 @@ function Calculator() {
                              </p>
                              {alt.lastUpdated && (
                                <p className="text-xs text-slate-500 mb-1">
-                                 Updated {alt.lastUpdated.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                                 Updated {formatUpdateDate(alt.lastUpdated)}
                                </p>
                              )}
                              <p className="text-base text-green-600 font-semibold">Save ${alt.savings}</p>

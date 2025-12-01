@@ -1,0 +1,71 @@
+{
+  "models": {
+    "GPT-4": {
+      "input": 30,
+      "output": 60,
+      "provider": "openai",
+      "category": "Premium"
+    },
+    "GPT-4 Turbo": {
+      "input": 10,
+      "output": 30,
+      "provider": "openai",
+      "category": "Standard"
+    },
+    "GPT-4o": {
+      "input": 2.5,
+      "output": 10,
+      "provider": "openai",
+      "category": "Balanced"
+    },
+    "GPT-4o mini": {
+      "input": 0.15,
+      "output": 0.6,
+      "provider": "openai",
+      "category": "Budget"
+    },
+    "GPT-3.5 Turbo": {
+      "input": 0.5,
+      "output": 1.5,
+      "provider": "openai",
+      "category": "Budget"
+    },
+    "Claude 3 Opus": {
+      "input": 15,
+      "output": 75,
+      "provider": "anthropic",
+      "category": "Premium"
+    },
+    "Claude 3.5 Sonnet": {
+      "input": 3,
+      "output": 15,
+      "provider": "anthropic",
+      "category": "Standard"
+    },
+    "Claude 3 Haiku": {
+      "input": 0.25,
+      "output": 1.25,
+      "provider": "anthropic",
+      "category": "Budget"
+    },
+    "Gemini 2.0 Flash": {
+      "input": 0.075,
+      "output": 0.3,
+      "provider": "google",
+      "category": "Budget"
+    },
+    "Llama 3.1 70B": {
+      "input": 0.05,
+      "output": 0.08,
+      "provider": "groq",
+      "category": "Budget"
+    },
+    "DeepSeek Chat": {
+      "input": 0.14,
+      "output": 0.28,
+      "provider": "deepseek",
+      "category": "Budget"
+    }
+  },
+  "lastUpdated": "2025-01-01T00:00:00Z"
+}
