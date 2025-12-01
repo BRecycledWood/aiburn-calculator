@@ -9,6 +9,9 @@ const requestCounts = new Map()
 const RATE_LIMIT_WINDOW_MS = 60 * 1000 // 1 minute
 const RATE_LIMIT_MAX_REQUESTS = 10 // 10 requests per IP per minute
 
+// Request size limit (10KB)
+const MAX_PAYLOAD_SIZE = 10 * 1024
+
 const isRateLimited = (ip) => {
   const now = Date.now()
   const userData = requestCounts.get(ip) || { count: 0, resetTime: now + RATE_LIMIT_WINDOW_MS }
@@ -138,6 +141,14 @@ export default async function handler(req, res) {
   // Only accept POST
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' })
+    return
+  }
+  
+  // Check payload size
+  const contentLength = parseInt(req.headers['content-length'] || '0')
+  if (contentLength > MAX_PAYLOAD_SIZE) {
+    log('warn', 'Payload too large', { contentLength, clientIp })
+    res.status(413).json({ error: 'Request payload too large. Maximum 10KB allowed.' })
     return
   }
   

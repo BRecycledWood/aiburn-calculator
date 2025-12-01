@@ -7,16 +7,27 @@
 
 import nodemailer from 'nodemailer';
 
+// Request size limit (10KB)
+const MAX_PAYLOAD_SIZE = 10 * 1024;
+
 // CORS helper
-const setCORSHeaders = (res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+const setCORSHeaders = (res, origin) => {
+  const allowedOrigins = [
+    'https://aiburn.howstud.io',
+    'https://aiburn-cost-calculator.vercel.app',
+    'http://localhost:5173',
+    'http://127.0.0.1:5173'
+  ];
+  
+  const corsOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0];
+  res.setHeader('Access-Control-Allow-Origin', corsOrigin);
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 };
 
 export default async (req, res) => {
   // Set CORS headers first
-  setCORSHeaders(res);
+  setCORSHeaders(res, req.headers.origin);
 
   // Handle preflight
   if (req.method === 'OPTIONS') {
@@ -26,6 +37,14 @@ export default async (req, res) => {
   // Only POST allowed
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  // Check payload size
+  const contentLength = parseInt(req.headers['content-length'] || '0');
+  if (contentLength > MAX_PAYLOAD_SIZE) {
+    return res.status(413).json({ 
+      error: 'Request payload too large. Maximum 10KB allowed.' 
+    });
   }
 
   const { name, email, company, message } = req.body || {};
