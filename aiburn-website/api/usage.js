@@ -4,6 +4,42 @@
  * SECURITY: All input validated, no credential exposure
  */
 
+// Simple in-memory rate limiter
+const requestCounts = new Map()
+const RATE_LIMIT_WINDOW_MS = 60 * 1000 // 1 minute
+const RATE_LIMIT_MAX_REQUESTS = 10 // 10 requests per IP per minute
+
+const isRateLimited = (ip) => {
+  const now = Date.now()
+  const userData = requestCounts.get(ip) || { count: 0, resetTime: now + RATE_LIMIT_WINDOW_MS }
+  
+  if (now > userData.resetTime) {
+    requestCounts.set(ip, { count: 1, resetTime: now + RATE_LIMIT_WINDOW_MS })
+    return false
+  }
+  
+  if (userData.count >= RATE_LIMIT_MAX_REQUESTS) {
+    return true
+  }
+  
+  userData.count++
+  requestCounts.set(ip, userData)
+  return false
+}
+
+// Cleanup old entries every 5 minutes to prevent memory leak
+if (typeof global !== 'undefined' && !global._rateLimitCleanupScheduled) {
+  global._rateLimitCleanupScheduled = true
+  setInterval(() => {
+    const now = Date.now()
+    for (const [ip, data] of requestCounts.entries()) {
+      if (now > data.resetTime + RATE_LIMIT_WINDOW_MS) {
+        requestCounts.delete(ip)
+      }
+    }
+  }, 5 * 60 * 1000)
+}
+
 // CORS configuration - restrict to specific origins in production
 const getCORSHeaders = (origin) => {
   const allowedOrigins = process.env.NODE_ENV === 'production'
@@ -81,6 +117,12 @@ const log = (level, message, data = {}) => {
 export default async function handler(req, res) {
   const origin = req.headers.origin || 'unknown'
   const corsHeaders = getCORSHeaders(origin)
+  
+  // Get client IP for rate limiting
+  const clientIp = req.headers['x-forwarded-for']?.split(',')[0].trim() ||
+                   req.headers['x-real-ip'] ||
+                   req.socket?.remoteAddress ||
+                   'unknown'
 
   // Set CORS headers on all responses
   Object.keys(corsHeaders).forEach((key) => {
@@ -96,6 +138,13 @@ export default async function handler(req, res) {
   // Only accept POST
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' })
+    return
+  }
+  
+  // Check rate limit
+  if (isRateLimited(clientIp)) {
+    log('warn', 'Rate limit exceeded', { clientIp })
+    res.status(429).json({ error: 'Too many requests. Please try again later.' })
     return
   }
 

@@ -146,6 +146,9 @@ function AdCard({ slot, onRotate, isAvailableSlot = false }) {
 
 // Main Calculator Component
 function Calculator() {
+  // Email endpoint from environment or fallback
+  const EMAIL_ENDPOINT = import.meta.env.VITE_EMAIL_ENDPOINT || 'https://formsubmit.co/tryaiburn@howstud.io'
+  
   const [mode, setMode] = useState('exact') // 'quick' or 'exact'
   const [selectedModel, setSelectedModel] = useState('GPT-4o')
   const [monthlyTokens, setMonthlyTokens] = useState(10)
@@ -198,6 +201,11 @@ function Calculator() {
 
   // Validate input/output token split
   const validateTokenSplit = (input, output, total) => {
+    // Check for negative values
+    if (input < 0 || output < 0) {
+      return '❌ Token values cannot be negative'
+    }
+    
     const sum = input + output
     const tolerance = total * 0.05 // 5% tolerance
     if (Math.abs(sum - total) > tolerance) {
@@ -405,10 +413,15 @@ function Calculator() {
   const downloadReport = async () => {
     if (!results) return
 
-    const canvas = document.createElement('canvas')
-    canvas.width = 1200
-    canvas.height = 630
-    const ctx = canvas.getContext('2d')
+    try {
+      const canvas = document.createElement('canvas')
+      canvas.width = 1200
+      canvas.height = 630
+      const ctx = canvas.getContext('2d')
+      
+      if (!ctx) {
+        throw new Error('Unable to get canvas context')
+      }
 
     // Gradient background
     const gradient = ctx.createLinearGradient(0, 0, 1200, 630)
@@ -478,6 +491,10 @@ function Calculator() {
     link.href = canvas.toDataURL('image/png')
     link.download = `aiburn-analysis-${Date.now()}.png`
     link.click()
+    } catch (error) {
+    console.error('Failed to generate screenshot:', error)
+    setError('Failed to generate screenshot. Please try again.')
+    }
     }
 
     // Handle email capture submission
@@ -506,7 +523,7 @@ function Calculator() {
      formData.append('_subject', 'AIBurn Cost Analysis Report')
      formData.append('_captcha', 'false')
 
-     const response = await fetch('https://formsubmit.co/tryaiburn@howstud.io', {
+     const response = await fetch(EMAIL_ENDPOINT, {
        method: 'POST',
        body: formData,
      })
