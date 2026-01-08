@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "timestamp": "2026-01-07T01:21:33.724Z",
+  "timestamp": "2026-01-08T01:22:18.062Z",
   "source": "AIBurn Auto Price Fetcher",
   "models": {
     "GPT-4": {
@@ -9,7 +9,7 @@
       "output": 60,
       "inputUnit": 1000,
       "outputUnit": 1000,
-      "lastUpdated": "2026-01-07T01:21:33.722Z"
+      "lastUpdated": "2026-01-08T01:22:18.060Z"
     },
     "GPT-4 Turbo": {
       "provider": "openai",
@@ -17,7 +17,7 @@
       "output": 30,
       "inputUnit": 1000,
       "outputUnit": 1000,
-      "lastUpdated": "2026-01-07T01:21:33.722Z"
+      "lastUpdated": "2026-01-08T01:22:18.060Z"
     },
     "GPT-4o": {
       "provider": "openai",
@@ -25,7 +25,7 @@
       "output": 10,
       "inputUnit": 1000,
       "outputUnit": 1000,
-      "lastUpdated": "2026-01-07T01:21:33.722Z"
+      "lastUpdated": "2026-01-08T01:22:18.060Z"
     },
     "GPT-3.5 Turbo": {
       "provider": "openai",
@@ -33,7 +33,7 @@
       "output": 1.5,
       "inputUnit": 1000,
       "outputUnit": 1000,
-      "lastUpdated": "2026-01-07T01:21:33.722Z"
+      "lastUpdated": "2026-01-08T01:22:18.060Z"
     },
     "Claude 3 Opus": {
       "provider": "anthropic",
@@ -41,7 +41,7 @@
       "output": 75,
       "inputUnit": 1000,
       "outputUnit": 1000,
-      "lastUpdated": "2026-01-07T01:21:33.723Z"
+      "lastUpdated": "2026-01-08T01:22:18.060Z"
     },
     "Claude 3.5 Sonnet": {
       "provider": "anthropic",
@@ -49,7 +49,7 @@
       "output": 15,
       "inputUnit": 1000,
       "outputUnit": 1000,
-      "lastUpdated": "2026-01-07T01:21:33.723Z"
+      "lastUpdated": "2026-01-08T01:22:18.060Z"
     },
     "Claude 3 Haiku": {
       "provider": "anthropic",
@@ -57,7 +57,7 @@
       "output": 1.25,
       "inputUnit": 1000,
       "outputUnit": 1000,
-      "lastUpdated": "2026-01-07T01:21:33.723Z"
+      "lastUpdated": "2026-01-08T01:22:18.061Z"
     },
     "Llama 3.1 70B": {
       "provider": "groq",
@@ -65,7 +65,7 @@
       "output": 0.08,
       "inputUnit": 1000,
       "outputUnit": 1000,
-      "lastUpdated": "2026-01-07T01:21:33.723Z"
+      "lastUpdated": "2026-01-08T01:22:18.061Z"
     },
     "DeepSeek Chat": {
       "provider": "deepseek",
@@ -73,7 +73,7 @@
       "output": 0.28,
       "inputUnit": 1000,
       "outputUnit": 1000,
-      "lastUpdated": "2026-01-07T01:21:33.724Z"
+      "lastUpdated": "2026-01-08T01:22:18.061Z"
     }
   },
   "updateLog": [
