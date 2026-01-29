@@ -1874,3 +1874,22 @@
 [2026-01-28T01:23:59.073Z] SUCCESS: Price data validation passed {"models":9}
 [2026-01-28T01:23:59.073Z] SUCCESS: Price data saved {"file":"/home/runner/work/aiburn-calculator/aiburn-calculator/aiburn-website/public/data/prices.json"}
 [2026-01-28T01:23:59.073Z] SUCCESS: Price update completed successfully {"duration":"6ms","models":9,"timestamp":"2026-01-28T01:23:59.072Z"}
+[2026-01-29T01:44:55.075Z] INFO: Starting price update process
+[2026-01-29T01:44:55.077Z] INFO: Building price data from sources
+[2026-01-29T01:44:55.078Z] INFO: Processing OpenAI prices {"provider":"openai"}
+[2026-01-29T01:44:55.078Z] INFO: Updated GPT-4 {"provider":"openai","input":30,"output":60}
+[2026-01-29T01:44:55.078Z] INFO: Updated GPT-4 Turbo {"provider":"openai","input":10,"output":30}
+[2026-01-29T01:44:55.078Z] INFO: Updated GPT-4o {"provider":"openai","input":2.5,"output":10}
+[2026-01-29T01:44:55.078Z] INFO: Updated GPT-3.5 Turbo {"provider":"openai","input":0.5,"output":1.5}
+[2026-01-29T01:44:55.079Z] INFO: Processing Anthropic prices {"provider":"anthropic"}
+[2026-01-29T01:44:55.079Z] INFO: Updated Claude 3 Opus {"provider":"anthropic","input":15,"output":75}
+[2026-01-29T01:44:55.079Z] INFO: Updated Claude 3.5 Sonnet {"provider":"anthropic","input":3,"output":15}
+[2026-01-29T01:44:55.079Z] INFO: Updated Claude 3 Haiku {"provider":"anthropic","input":0.25,"output":1.25}
+[2026-01-29T01:44:55.079Z] INFO: Processing Groq prices {"provider":"groq"}
+[2026-01-29T01:44:55.080Z] INFO: Updated Llama 3.1 70B {"provider":"groq","input":0.05,"output":0.08}
+[2026-01-29T01:44:55.080Z] INFO: Processing DeepSeek prices {"provider":"deepseek"}
+[2026-01-29T01:44:55.080Z] INFO: Updated DeepSeek Chat {"provider":"deepseek","input":0.14,"output":0.28}
+[2026-01-29T01:44:55.081Z] INFO: Validating price data
+[2026-01-29T01:44:55.081Z] SUCCESS: Price data validation passed {"models":9}
+[2026-01-29T01:44:55.081Z] SUCCESS: Price data saved {"file":"/home/runner/work/aiburn-calculator/aiburn-calculator/aiburn-website/public/data/prices.json"}
+[2026-01-29T01:44:55.081Z] SUCCESS: Price update completed successfully {"duration":"6ms","models":9,"timestamp":"2026-01-29T01:44:55.081Z"}
